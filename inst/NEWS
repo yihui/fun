@@ -1,0 +1,13 @@
+	**************************************************
+	*						 *
+	*	       0.1-0 NEWS			 *
+	*						 *
+	**************************************************
+
+		CHANGES IN fun VERSION 0.1-0
+
+
+NEW FEATURES
+
+    o R can perform t-test, F test and so on, but sometimes 
+  we use R to test Alzheimer's disease; see alzheimer.test()

@@ -1,0 +1,11 @@
+Package: fun
+Type: Package
+Title: Use R for Fun
+Version: 0.1-0
+Date: 2009-04-07
+Author: Yihui Xie, Taiyun Wei and Yixuan Qiu
+Maintainer: Yihui Xie <xieyihui@gmail.com>
+Description: This is a collection of R games and other funny stuff, such as the classical Mine sweeper and sliding puzzles.
+License: GPL-2 | GPL-3
+LazyLoad: yes
+URL: http://fun.r-forge.r-project.org
