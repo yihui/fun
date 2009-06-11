@@ -9,11 +9,11 @@ Use R to write tag data (tag words, frequency, hyperlinks and colors, etc) into 
 }
 \usage{
 tagCloud(tagData, htmlOutput = "tagCloud.html", SWFPath, JSPath, 
-    divId = "tagCloudId", width = 600, height = 400, transparent = FALSE, 
-    tcolor = "333333", tcolor2 = "009900", hicolor = "ff0000", distr = "true", 
-    tspeed = 100, version = 9, bgcolor = "ffffff", useXML = FALSE, 
-    htmlTitle = "Tag Cloud", noFlashJS, target = NULL, scriptOnly = FALSE, 
-    encode = FALSE)
+    divId = "tagCloudId", width = 600, height = 400, 
+    transparent = FALSE, tcolor = "333333", tcolor2 = "009900", 
+    hicolor = "ff0000", distr = "true", tspeed = 100, version = 9, 
+    bgcolor = "ffffff", useXML = FALSE, htmlTitle = "Tag Cloud", 
+    noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE)
 }
 
 \arguments{
@@ -90,7 +90,7 @@ Yihui Xie
 }
 \examples{
 data(tagData)
-htmlFile = sprintf("%s.html", tempfile())
+htmlFile = paste(tempfile(), ".html", sep = "")
 if (file.create(htmlFile)) {
     tagCloud(tagData, htmlFile)
     browseURL(htmlFile)
