@@ -24,10 +24,10 @@ a data.frame containing at least 3 columns: \code{tag}, \code{link} and \code{co
 filename of the HTML output.
 }
   \item{SWFPath}{
-path of the SWF source file (\file{tagcloud.swf})
+path of the SWF source file (\file{tagcloud.swf}); see \code{system.file("js", "tagcloud.swf", package = "fun")}
 }
   \item{JSPath}{
-path of the JavaScript file (\file{swfobject.swf})
+path of the JavaScript file (\file{swfobject.js}); see \code{system.file("js", "swfobject.js", package = "fun")}
 }
   \item{divId}{
 id of the tag cloud div (HTML layer)
@@ -89,11 +89,13 @@ Yihui Xie
 \code{\link[base]{cat}}, \code{\link[base]{sprintf}}, \code{\link[utils]{URLencode}}
 }
 \examples{
+\dontrun{ 
 data(tagData)
 htmlFile = paste(tempfile(), ".html", sep = "")
 if (file.create(htmlFile)) {
     tagCloud(tagData, htmlFile)
     browseURL(htmlFile)
+}
 }
 }
 \keyword{ dynamic }
