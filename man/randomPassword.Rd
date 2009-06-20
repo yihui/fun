@@ -22,9 +22,11 @@ sample from the ASCII table with (\code{TRUE}) or without (\code{FALSE}) replace
 a character string
 }
 \author{
-Yihui Xie <\url{http://www.yihui.name}>
+Yihui Xie <\url{http://yihui.name}>
 }
-
+\references{
+\url{http://cos.name/en/topic/generating-passwords-with-r-from-ascii-characters}
+}
 \seealso{
 \code{\link[base]{sample}}
 }
