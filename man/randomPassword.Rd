@@ -31,13 +31,12 @@ Yihui Xie <\url{http://yihui.name}>
 \code{\link[base]{sample}}
 }
 \examples{
-# I don't know the result
 randomPassword()
-# set the seed (you get "<jFqu%OnPG{|")
+# set the seed to get fixed password every time; you may just remember the seed
+#    and forget the real password because it's reproducible
 set.seed(123)
 randomPassword()
 # long password
 randomPassword(20, TRUE)
 }
 \keyword{ misc }
-
