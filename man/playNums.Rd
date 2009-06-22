@@ -13,7 +13,7 @@ playNums(size = NULL, bg = "lightblue", z = NULL, ...)
 
 \arguments{
   \item{size}{
-two dimensional vector, the size of sliding puzzle. Note: the element of \code{size} must be great than 1.
+two dimensional vector, the size of sliding puzzle. Note: the element of \code{size} must be greater than 1.
 }
 
   \item{bg}{
@@ -27,7 +27,7 @@ the matrix of sliding puzzle, if z is specialized, \code{size} will be omited.
 }
 
 \details{
-If \code{size} is specialized and \code{z} is \code{NULL}, then the function will generate a sliding puzzle which is guaranteed can be solved.
+If \code{size} is specialized and \code{z} is \code{NULL}, then the function will generate a solvable sliding puzzle.
 }
 
 \references{
