@@ -1,14 +1,14 @@
-\name{playNums}
+\name{sliding.puzzle}
 \Rdversion{1.1}
-\alias{playNums}
+\alias{sliding.puzzle}
 \title{
 Sliding puzzle in R
 }
 \description{
-Use R to play sliding puzzle.
+Use R to play sliding puzzle (currently only the Windows screen display).
 }
 \usage{
-playNums(size = NULL, bg = "lightblue", z = NULL, ...)
+sliding.puzzle(size = NULL, bg = "lightblue", z = NULL, ...)
 }
 
 \arguments{
@@ -27,7 +27,7 @@ the matrix of sliding puzzle, if z is specialized, \code{size} will be omited.
 }
 
 \details{
-If \code{size} is specialized and \code{z} is \code{NULL}, then the function will generate a solvable sliding puzzle.
+If \code{size} is specialized and \code{z} is \code{NULL}, then the function will generate a solvable sliding puzzle. In addition, the function only works under the Windows screen display because of the limitation of function \code{getGraphicsEvent}.
 }
 
 \references{
@@ -42,9 +42,9 @@ Taiyun Wei
 
 \examples{
 \dontrun{ 
-playNums(c(3,3))
+sliding.puzzle(c(3,3))
 
-playNums(z=matrix(0:11, 3, 4))
+sliding.puzzle(z=matrix(0:11, 3, 4))
 }
 }
 \keyword{sliding}

@@ -3,7 +3,7 @@
 #' @param size vector, the size of puzzle
 #' @param bg, the color of blocks
 #' @param z, the puzzle matrix
-playNums <- function(size = NULL, bg = "lightblue", z = NULL, ...) {
+sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL, ...) {
 	  if(!is.null(size)){
 	      n <- size[1]
 	      m <- size[2]
@@ -112,6 +112,7 @@ playNums <- function(size = NULL, bg = "lightblue", z = NULL, ...) {
 	ptm <- proc.time()
 	windows(5, 5)
     replot(z)
-    getGraphicsEvent("Game begin!", onMouseDown = mousedown)
+	if (.Platform$OS.type == "windows")
+		getGraphicsEvent("Game begin!", onMouseDown = mousedown)
 
 } 
