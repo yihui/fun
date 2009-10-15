@@ -31,7 +31,7 @@ If \code{size} is specialized and \code{z} is \code{NULL}, then the function wil
 }
 
 \references{
-About the sliding puzzle: \url{http://gfxtalk.net/index.php?hl=f5&q=uggc%3A%2F%2Fra.jvxvcrqvn.bet%2Fjvxv%2FFyvqvat_chmmyr}
+About the sliding puzzle: \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
 
 How to Solve a Slider Puzzle: \url{http://www.justadventure.com/articles/Slider/Slider.shtm}
 }
@@ -47,5 +47,4 @@ sliding.puzzle(c(3,3))
 sliding.puzzle(z=matrix(0:11, 3, 4))
 }
 }
-\keyword{sliding}
-\keyword{puzzle}
+\keyword{iplot}

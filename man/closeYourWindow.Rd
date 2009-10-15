@@ -7,7 +7,7 @@ Use R to play the Close Your Window game (currently only for Windows system).
 \usage{
 closeYourWindow(width = 5, height = 5, steps = 3, cheat = FALSE, 
                 col.closed = "black", col.open = "white", 
-                col.frame = "lightblue", seed = NULL)
+                col.frame = "lightblue", seed = NULL, ...)
 }
 \arguments{
   \item{width}{ number of grids in horizontal axis. }
