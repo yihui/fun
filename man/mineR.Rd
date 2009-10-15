@@ -28,4 +28,4 @@ The controls should be familiar to you: Click the left mouse button to dig an ar
 mineR(width=8, height=8, mines=10, text.cex=3)
 }
 }
-\keyword{ mine }
+\keyword{ iplot }

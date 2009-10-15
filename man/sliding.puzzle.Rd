@@ -21,13 +21,13 @@ the background color of blocks.
 }
 
   \item{z}{
-the matrix of sliding puzzle, if z is specialized, \code{size} will be omited.
+the matrix of sliding puzzle, if z is specified, \code{size} will be omited.
 }
 
 }
 
 \details{
-If \code{size} is specialized and \code{z} is \code{NULL}, then the function will generate a solvable sliding puzzle. In addition, the function only works under the Windows screen display because of the limitation of function \code{getGraphicsEvent}.
+If \code{size} is specified and \code{z} is \code{NULL}, then the function will generate a solvable sliding puzzle. In addition, the function only works under the Windows screen display because of the limitation of function \code{getGraphicsEvent}.
 }
 
 \references{

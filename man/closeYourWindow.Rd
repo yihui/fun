@@ -29,4 +29,4 @@ In default, the white grids in the graphics stand for the windows that are open,
 closeYourWindow(width=5, height=5, steps=3)
 }
 }
-\keyword{ window }
+\keyword{ iplot }
