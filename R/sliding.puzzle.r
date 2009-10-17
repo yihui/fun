@@ -3,7 +3,7 @@
 #' @param size vector, the size of puzzle
 #' @param bg, the color of blocks
 #' @param z, the puzzle matrix
-sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL, ...) {
+sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
 	  if(!is.null(size)){
 	      n <- size[1]
 	      m <- size[2]

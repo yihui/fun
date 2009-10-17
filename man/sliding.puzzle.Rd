@@ -8,7 +8,7 @@ Sliding puzzle in R
 Use R to play sliding puzzle (currently only the Windows screen display).
 }
 \usage{
-sliding.puzzle(size = NULL, bg = "lightblue", z = NULL, ...)
+sliding.puzzle(size = NULL, bg = "lightblue", z = NULL)
 }
 
 \arguments{
