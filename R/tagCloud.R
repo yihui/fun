@@ -5,6 +5,7 @@ function(tagData, htmlOutput = "tagCloud.html",
     hicolor = "ff0000", distr = "true", tspeed = 100, version = 9, 
     bgcolor = "ffffff", useXML = FALSE, htmlTitle = "Tag Cloud", 
     noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE) {
+    tagData$tag = htmlspecialchars(tagData$tag)
     missingSWF = missing(SWFPath)
     if (missingSWF) 
         SWFPath = "http://yihui.name/en/wp-content/uploads/2009/06/tagcloud.swf"
