@@ -1,7 +1,8 @@
 closeYourWindow <- function(width = 5, height = 5, 
     steps = 3, cheat = FALSE, col.closed = "black", col.open = "white", 
     col.frame = "lightblue", seed = NULL, ...) {
-    zmat <<- mat.ini <- matrix(1, height, width)
+    assign("env", environment(), envir = .GlobalEnv)
+    zmat <- mat.ini <- matrix(1, height, width)
     trans <- function(z, x, y) {
         nr <- nrow(z)
         nc <- ncol(z)
@@ -37,7 +38,9 @@ closeYourWindow <- function(width = 5, height = 5,
     plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5, 
         width + 0.5), ylim = c(0.5, height + 0.5), axes = FALSE)
     replot(zmat)
+    
     mousedown <- function(buttons, x, y) {
+        zmat <- get("zmat", envir = env)
         nr <- nrow(zmat)
         nc <- ncol(zmat)
         plx <- round(grconvertX(x, "ndc", "user"))
@@ -49,6 +52,7 @@ closeYourWindow <- function(width = 5, height = 5,
         replot(zmat.trans)
         return(zmat.trans)
     }
+    
     while (1) {
         if (!any(zmat == -1)) {
             cat("You win!")
@@ -56,4 +60,4 @@ closeYourWindow <- function(width = 5, height = 5,
         }
         zmat <- getGraphicsEvent(prompt = "", onMouseDown = mousedown)
     }
-} 
+}

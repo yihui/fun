@@ -6,20 +6,17 @@ mineR <- function(width = 10, height = 10, mines = 20,
     if (width <= 0 | height <= 0 | mines <= 0) {
         stop("Are you serious???")
     }
-    width <<- width
-    height <<- height
-    mines <<- mines
-    text.cex <<- text.cex
+    assign("env", environment(), envir = .GlobalEnv)
     m <- rep(0, width * height)
-    mat.status <<- matrix(m, height, width)
+    mat.status <- matrix(m, height, width)
     if (!is.null(seed)) {
         set.seed(seed, ...)
     }
     mine.index <- sample(1:(width * height), mines)
     m[mine.index] <- -10
     mine.mat <- matrix(m, height, width)
-    mine.row <<- which(mine.mat < 0, arr.ind = TRUE)[, 1]
-    mine.col <<- which(mine.mat < 0, arr.ind = TRUE)[, 2]
+    mine.row <- which(mine.mat < 0, arr.ind = TRUE)[, 1]
+    mine.col <- which(mine.mat < 0, arr.ind = TRUE)[, 2]
     for (i in 1:mines) {
         mrow <- intersect(1:height, (mine.row[i] - 1):(mine.row[i] + 
             1))
@@ -31,6 +28,7 @@ mineR <- function(width = 10, height = 10, mines = 20,
     if (cheat) {
         print(mine.mat)
     }
+    
     x11(width, height)
     par(mar = c(0, 0, 0, 0))
     plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5, 
@@ -39,43 +37,51 @@ mineR <- function(width = 10, height = 10, mines = 20,
     y.grid <- outer(1:width, 1:height, function(x, y) y)
     symbols(x.grid, y.grid, rectangles = matrix(1, length(x.grid), 
         2), inches = FALSE, fg = "black", bg = "white", add = TRUE)
+    
+    plot.mine <- function(x, y, color = "black") {
+        symbols(x - 0.1, y - 0.1, circles = rep(0.3, length(x)), 
+            inches = FALSE, fg = NULL, bg = color, add = TRUE)
+        segments(x, y, x + 0.2, y + 0.2, col = color, lwd = 2)
+        segments(x + 0.2, y + 0.2, x + 0.3, y + 0.1, col = color, 
+            lwd = 2)
+    }
+    plot.flag <- function(x, y) {
+        symbols(x + 0.075, y + 0.2, rectangles = matrix(rep(c(0.35, 
+            0.2), rep(length(x), 2)), ncol = 2), inches = FALSE, 
+            fg = "red", bg = "red", add = TRUE)
+        symbols(x, y - 0.25, rectangles = matrix(rep(c(0.6, 0.1), 
+            rep(length(x), 2)), ncol = 2), inches = FALSE, fg = "black", 
+            bg = "black", add = TRUE)
+        segments(x - 0.1, y + 0.3, x - 0.1, y - 0.2)
+    }
+    search.zeroes = function(pos, mat) {
+        nr <- nrow(mat)
+        nc <- ncol(mat)
+        x <- ifelse(pos%%nr == 0, nr, pos%%nr)
+        y <- ceiling(pos/nr)
+        areas <- c(pos, (x > 1 & y > 1) * (pos - nr - 1), (y > 
+            1) * (pos - nr), (x < nr & y > 1) * (pos - nr + 1), 
+            (x > 1) * (pos - 1), (x < nr) * (pos + 1), (x > 1 & 
+                y < nc) * (pos + nr - 1), (y < nc) * (pos + nr), 
+            (x < nr & y < nc) * (pos + nr + 1))
+        areas <- unique(areas[areas != 0])
+        zeroes <- intersect(areas, which(mat == 0))
+        return(list(zeroes = zeroes, areas = areas))
+    }
     mousedown <- function(buttons, x, y) {
-        plot.mine <- function(x, y, color = "black") {
-            symbols(x - 0.1, y - 0.1, circles = rep(0.3, length(x)), 
-                inches = FALSE, fg = NULL, bg = color, add = TRUE)
-            segments(x, y, x + 0.2, y + 0.2, col = color, lwd = 2)
-            segments(x + 0.2, y + 0.2, x + 0.3, y + 0.1, col = color, 
-                lwd = 2)
-        }
-        plot.flag <- function(x, y) {
-            symbols(x + 0.075, y + 0.2, rectangles = matrix(rep(c(0.35, 
-                0.2), rep(length(x), 2)), ncol = 2), inches = FALSE, 
-                fg = "red", bg = "red", add = TRUE)
-            symbols(x, y - 0.25, rectangles = matrix(rep(c(0.6, 
-                0.1), rep(length(x), 2)), ncol = 2), inches = FALSE, 
-                fg = "black", bg = "black", add = TRUE)
-            segments(x - 0.1, y + 0.3, x - 0.1, y - 0.2)
-        }
-        search.zeroes = function(pos, mat) {
-            nr <- nrow(mat)
-            nc <- ncol(mat)
-            x <- ifelse(pos%%nr == 0, nr, pos%%nr)
-            y <- ceiling(pos/nr)
-            areas <- c(pos, (x > 1 & y > 1) * (pos - nr - 1), 
-                (y > 1) * (pos - nr), (x < nr & y > 1) * (pos - 
-                  nr + 1), (x > 1) * (pos - 1), (x < nr) * (pos + 
-                  1), (x > 1 & y < nc) * (pos + nr - 1), (y < 
-                  nc) * (pos + nr), (x < nr & y < nc) * (pos + 
-                  nr + 1))
-            areas <- unique(areas[areas != 0])
-            zeroes <- intersect(areas, which(mat == 0))
-            return(list(zeroes = zeroes, areas = areas))
-        }
         color <- c("white", "grey", "DarkBlue", "ForestGreen", 
             "brown", "green", "blue", "yellow", "orange", "red")
         plx <- round(grconvertX(x, "ndc", "user"))
         ply <- round(grconvertY(y, "ndc", "user"))
-        ms <- mat.status
+        
+        width <- get("width", envir = env)
+        height <- get("height", envir = env)
+        mines <- get("mines", envir = env)
+        text.cex <- get("text.cex", envir = env)
+        mine.row <- get("mine.row", envir = env)
+        mine.col <- get("mine.col", envir = env)
+        ms <- get("mat.status", envir = env)
+        
         current.status <- ms[height + 1 - ply, plx]
         current.mat <- mine.mat[height + 1 - ply, plx]
         if (plx < 1 | plx > width | ply < 1 | ply > height | 
@@ -157,9 +163,10 @@ mineR <- function(width = 10, height = 10, mines = 20,
             return(ms)
         }
     }
+    
     while (1) {
         if (length(mat.status) == 1) 
             break
         mat.status <- getGraphicsEvent(prompt = "", onMouseDown = mousedown)
     }
-} 
+}
