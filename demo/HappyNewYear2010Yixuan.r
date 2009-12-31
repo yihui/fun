@@ -61,6 +61,7 @@ y2 = list(NULL, a2.y, p2.y, p2.y, NULL, NULL, NULL,
     NULL, NULL, NULL, a2.y, r2.y)
 th = seq(pi/6, 2 * pi, length.out = 12)
 cols = rainbow(200)
+par(bg = "black")
 replicate(100, {
     for (j in 1:238) {
         th = th - pi/120
@@ -79,5 +80,6 @@ replicate(100, {
         }
         text(8, -2.5, "Yixuan @ 2009-12-31 (http://yixuan.cos.name)",
             adj = c(1, 0), col = "white", cex = 0.8)
+        Sys.sleep(0.02)
     }
 })
