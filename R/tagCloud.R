@@ -4,7 +4,8 @@ function(tagData, htmlOutput = "tagCloud.html",
     transparent = FALSE, tcolor = "333333", tcolor2 = "009900", 
     hicolor = "ff0000", distr = "true", tspeed = 100, version = 9, 
     bgcolor = "ffffff", useXML = FALSE, htmlTitle = "Tag Cloud", 
-    noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE) {
+    noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE,
+    reserved = FALSE) {
     tagData$tag = htmlspecialchars(tagData$tag)
     missingSWF = missing(SWFPath)
     if (missingSWF) 
@@ -26,7 +27,7 @@ function(tagData, htmlOutput = "tagCloud.html",
         else ifelse(!is.na(tagData$hicolor), sprintf(" hicolor='0x%s'", 
             tagData$hicolor, ""), ""), tagData$tag), collapse = ""))
     if (encode)
-        tagXML = URLencode(tagXML)
+        tagXML = URLencode(tagXML, reserved)
     if (useXML) {
         cat(tagXML, file = file.path(dirname(htmlOutput), "tagcloud.xml"))
         if (!("tagcloud.swf" %in% list.files(dirname(htmlOutput)))) {

@@ -65,6 +65,9 @@ print the script in the console only? (if \code{TRUE}), no HTML file will be gen
   \item{encode}{
 encode the tag XML or not? (with \code{\link[utils]{URLencode}}) set it to be \code{TRUE} when your browser does not recognize the tag XML correctly
 }
+  \item{reserved}{
+should reserved characters be encoded? see \code{\link[utils]{URLencode}}
+}
 }
 \details{
 This function is based on the WordPress plugin ``wp-cumulus''. If there are any arguments you don't understand, please check the reference.
