@@ -48,7 +48,10 @@ sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
     }
     z[!z]<-NA
     
-
+    if (.Platform$OS.type != "windows"){
+       ifelse(require('cairoDevice'), Cairo(), 
+	   warning("Need cairoDevice package if your OS is not WINDOWS!"))
+    }	
     ## plot puzzles
     replot <- function(z) {
         bg <- ifelse(z, bg, "white")
@@ -112,7 +115,6 @@ sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
 	ptm <- proc.time()
 	windows(5, 5)
     replot(z)
-	if (.Platform$OS.type == "windows")
-		getGraphicsEvent("Game begin!", onMouseDown = mousedown)
+	getGraphicsEvent("Game begin!", onMouseDown = mousedown)
 
 } 
