@@ -9,6 +9,10 @@ sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
 	      m <- size[2]
 	  }
 	  
+	  if(length(size)==1){
+		n <- m <- size
+	  }
+	  
 	  if(!is.null(z)){
 		  n <- dim(z)[1]
 		  m <- dim(z)[2]
@@ -42,7 +46,7 @@ sliding.puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
     
     ## guarantee the game can be solved
 	len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))
-    while((len.right%%2)!=(len.z%%2)|all(z==z.right)){
+    while((len.right%%2)!=(len.z%%2)| (all(z==z.right)) ){
     	z <- matrix(sample(0:(n*m - 1)), n)
     	len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))   	
     }
