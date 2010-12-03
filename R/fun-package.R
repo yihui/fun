@@ -1,12 +1,10 @@
-
-
 ##' Use R for Fun
 ##' This is a collection of R games and other funny stuff, such as the
 ##' classical Mine sweeper and sliding puzzles.
 ##'
-##' \tabular{ll}{ Package: \tab fun\cr Type: \tab Package\cr Version: \tab
-##' 0.1-0\cr Date: \tab 2009-04-07\cr License: \tab GPL-2 | GPL-3\cr LazyLoad:
-##' \tab yes\cr }
+##' \tabular{ll}{ Package: \tab fun\cr Type: \tab Package\cr
+##' License: \tab GPL-2 | GPL-3\cr
+##' LazyLoad: \tab yes\cr }
 ##'
 ##' @name fun-package
 ##' @aliases fun-package fun
@@ -23,7 +21,7 @@ NULL
 
 
 
-##' Tag Information of Yihui Xie's English Blog
+##' Tag Information of Yihui Xie's English Blog.
 ##' Tag data collected from Yihui Xie's Blog, containing the tag words,
 ##' frequency and hyperlinks, etc.
 ##'

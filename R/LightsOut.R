@@ -16,7 +16,7 @@
 ##' @param col.frame color of lights border.
 ##' @param seed seed for random number generator.
 ##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}.
-##' @author Yixuan Qiu <\email{yixuan.qiu@@cos.name}>
+##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
 ##' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
 ##' @keywords iplot
 ##' @examples
