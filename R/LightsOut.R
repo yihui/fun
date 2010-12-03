@@ -1,37 +1,33 @@
-
-
-##' Play the Close Your Window game in R
-##' Use R to play the Close Your Window game (currently only for Windows
-##' system).
-##' 
-##' In default, the white grids in the graphics stand for the windows that are
-##' open, and black ones for the closed. When you click on a window, this
-##' window as well as the four ones next to it will change its status. Your
+##' Play the ``Lights Out'' game in R.
+##'
+##' In default, the white squares in the plot denote the lights that are
+##' on, and black ones for the closed. When you click on a light, this
+##' light as well as the four neighbors will switch theirs status. Your
 ##' mission is to close all the windows.
-##' 
-##' @param width number of grids in horizontal axis.
-##' @param height number of grids in vertical axis.
-##' @param steps number of "seed" grids to initialize the puzzle. In general,
+##'
+##' @param width number of lights in x axis.
+##' @param height number of lights in y axis.
+##' @param steps number of ``seed'' lights to initialize the puzzle. In general,
 ##'   the larger \code{steps} is, the more complex this puzzle may be.
 ##' @param cheat logical. If \code{TRUE} a data frame indicating the steps to
 ##'   solve this puzzle will be printed.
-##' @param col.closed color of closed window.
-##' @param col.open color of open window.
-##' @param col.frame color of window frame.
+##' @param col.off color when lights off.
+##' @param col.on color when lights on.
+##' @param col.frame color of lights border.
 ##' @param seed seed for random number generator.
 ##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}.
-##' @author Yixuan Qiu
+##' @author Yixuan Qiu <\email{yixuan.qiu@@cos.name}>
+##' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
 ##' @keywords iplot
 ##' @examples
-##' 
+##'
 ##' \dontrun{
-##' closeYourWindow(width=5, height=5, steps=3)
+##' LightsOut(width=5, height=5, steps=3)
 ##' }
-##' 
-closeYourWindow <- function(width = 5, height = 5, 
-    steps = 3, cheat = FALSE, col.closed = "black", col.open = "white", 
+##'
+LightsOut <- function(width = 5, height = 5,
+    steps = 3, cheat = FALSE, col.off = "black", col.on = "white",
     col.frame = "lightblue", seed = NULL, ...) {
-    assign("env", environment(), envir = .GlobalEnv)
     zmat <- mat.ini <- matrix(1, height, width)
     trans <- function(z, x, y) {
         nr <- nrow(z)
@@ -59,18 +55,17 @@ closeYourWindow <- function(width = 5, height = 5,
         nc <- ncol(z)
         xv <- rep(1:nc, rep(nr, nc))
         yv <- nr + +1 - rep(1:nr, nc)
-        color <- ifelse(as.vector(z) == 1, col.closed, col.open)
-        symbols(xv, yv, rectangles = matrix(1, length(xv), 2), 
+        color <- ifelse(as.vector(z) == 1, col.off, col.on)
+        symbols(xv, yv, rectangles = matrix(1, length(xv), 2),
             inches = FALSE, fg = col.frame, bg = color, add = TRUE)
     }
     x11(width, height)
     par(mar = c(0, 0, 0, 0))
-    plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5, 
+    plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5,
         width + 0.5), ylim = c(0.5, height + 0.5), axes = FALSE)
     replot(zmat)
-    
+
     mousedown <- function(buttons, x, y) {
-        zmat <- get("zmat", envir = env)
         nr <- nrow(zmat)
         nc <- ncol(zmat)
         plx <- round(grconvertX(x, "ndc", "user"))
@@ -82,7 +77,7 @@ closeYourWindow <- function(width = 5, height = 5,
         replot(zmat.trans)
         return(zmat.trans)
     }
-    
+
     while (1) {
         if (!any(zmat == -1)) {
             cat("You win!")
