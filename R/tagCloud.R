@@ -1,3 +1,67 @@
+
+
+##' Creating Tag Cloud in R (with Flash and JavaScript)
+##' Use R to write tag data (tag words, frequency, hyperlinks and colors, etc)
+##' into JavaScript, and the JavaScript code will generate a Flash movie.
+##' Finally the tag cloud can be created with fantastic 3D rotation effect.
+##' 
+##' This function is based on the WordPress plugin ``wp-cumulus''. If there are
+##' any arguments you don't understand, please check the reference.
+##' 
+##' @param tagData a data.frame containing at least 3 columns: \code{tag},
+##'   \code{link} and \code{count}. Optional columns are \code{color} and
+##'   \code{hicolor}.
+##' @param htmlOutput filename of the HTML output.
+##' @param SWFPath path of the SWF source file (\file{tagcloud.swf}); see
+##'   \code{system.file("js", "tagcloud.swf", package = "fun")}
+##' @param JSPath path of the JavaScript file (\file{swfobject.js}); see
+##'   \code{system.file("js", "swfobject.js", package = "fun")}
+##' @param divId id of the tag cloud div (HTML layer)
+##' @param width,height width and height of the tag cloud
+##' @param transparent logical; whether to use transparent backgroud for the
+##'   Flash movie?
+##' @param tcolor,tcolor2,hicolor,distr,tspeed see Details.
+##' @param version the required Flash version
+##' @param bgcolor backgroud color of the Flash movie
+##' @param useXML use XML file for the tag information or just a string; this
+##'   will be passed to the Flash object as a variable
+##' @param htmlTitle title of the HTML file
+##' @param noFlashJS text to show if Flash or JavaScript is not supported
+##' @param target target window of the hyperlinks; possible values are
+##'   \code{NULL}, \code{'_blank'}, \code{'_top'}, etc
+##' @param scriptOnly print the script in the console only? (if \code{TRUE}),
+##'   no HTML file will be generated
+##' @param encode encode the tag XML or not? (with
+##'   \code{\link[utils]{URLencode}}) set it to be \code{TRUE} when your
+##'   browser does not recognize the tag XML correctly
+##' @param reserved should reserved characters be encoded? see
+##'   \code{\link[utils]{URLencode}}
+##' @return \code{NULL}
+##' @author Yihui Xie <\url{http://yihui.name}>
+##' @seealso \code{\link[base]{cat}}, \code{\link[base]{sprintf}},
+##'   \code{\link[utils]{URLencode}}
+##' @references About the WordPress plugin:
+##'   \url{http://www.roytanck.com/2008/03/15/wp-cumulus-released/}
+##' 
+##' Explanation of some arguments:
+##'   \url{http://www.roytanck.com/2008/05/19/how-to-repurpose-my-tag-cloud-flash-movie/}
+##' 
+##' Usage of the SWFObject: \url{http://blog.deconcept.com/swfobject/}
+##' 
+##' An example of visualizing tags in my blog:
+##'   \url{http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}
+##' @keywords dynamic file
+##' @examples
+##' 
+##' \dontrun{ 
+##' data(tagData)
+##' htmlFile = paste(tempfile(), ".html", sep = "")
+##' if (file.create(htmlFile)) {
+##'     tagCloud(tagData, htmlFile)
+##'     browseURL(htmlFile)
+##' }
+##' }
+##' 
 tagCloud <-
 function(tagData, htmlOutput = "tagCloud.html", 
     SWFPath, JSPath, divId = "tagCloudId", width = 600, height = 400, 

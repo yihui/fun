@@ -1,3 +1,28 @@
+
+
+##' Generate A Random Password with A Specified Length
+##' This function generates a random passord sampled from the ASCII table.
+##' 
+##' 
+##' @param length length of the password
+##' @param replace sample from the ASCII table with (\code{TRUE}) or without
+##'   (\code{FALSE}) replacement?
+##' @return a character string
+##' @author Yihui Xie <\url{http://yihui.name}>
+##' @seealso \code{\link[base]{sample}}
+##' @references
+##'   \url{http://cos.name/en/topic/generating-passwords-with-r-from-ascii-characters}
+##' @keywords misc
+##' @examples
+##' 
+##' randomPassword()
+##' # set the seed to get fixed password every time; you may just remember the seed
+##' #    and forget the real password because it's reproducible
+##' set.seed(123)
+##' randomPassword()
+##' # long password
+##' randomPassword(20, TRUE)
+##' 
 randomPassword <-
 function(length=12,replace=FALSE){
 x = c("!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",",

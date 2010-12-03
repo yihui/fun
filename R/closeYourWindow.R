@@ -1,3 +1,33 @@
+
+
+##' Play the Close Your Window game in R
+##' Use R to play the Close Your Window game (currently only for Windows
+##' system).
+##' 
+##' In default, the white grids in the graphics stand for the windows that are
+##' open, and black ones for the closed. When you click on a window, this
+##' window as well as the four ones next to it will change its status. Your
+##' mission is to close all the windows.
+##' 
+##' @param width number of grids in horizontal axis.
+##' @param height number of grids in vertical axis.
+##' @param steps number of "seed" grids to initialize the puzzle. In general,
+##'   the larger \code{steps} is, the more complex this puzzle may be.
+##' @param cheat logical. If \code{TRUE} a data frame indicating the steps to
+##'   solve this puzzle will be printed.
+##' @param col.closed color of closed window.
+##' @param col.open color of open window.
+##' @param col.frame color of window frame.
+##' @param seed seed for random number generator.
+##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}.
+##' @author Yixuan Qiu
+##' @keywords iplot
+##' @examples
+##' 
+##' \dontrun{
+##' closeYourWindow(width=5, height=5, steps=3)
+##' }
+##' 
 closeYourWindow <- function(width = 5, height = 5, 
     steps = 3, cheat = FALSE, col.closed = "black", col.open = "white", 
     col.frame = "lightblue", seed = NULL, ...) {

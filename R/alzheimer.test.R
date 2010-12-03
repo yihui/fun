@@ -1,3 +1,30 @@
+
+
+##' Test Alzheimer's Disease by Finding out the Different Character in A
+##' Character Rectangle
+##' Please try hard to find the letter "N" in 300 "M"s, one "6" in 300 "9"s,
+##' etc.
+##' 
+##' Follow the guidelines and finish the test.
+##' 
+##' @param char1 the 'background' character
+##' @param char2 the character to be found out
+##' @param nr number of rows of the character rectangle
+##' @param nc number of columns
+##' @param seed seed for random number generation
+##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}
+##' @return If at least one test item has been passed, a data.frame will be
+##'   returned telling the result of the test.
+##' @note Don't be too serious about this test. I'm no doctor, but I think this
+##'   will be a good present to your friends.
+##' @author Yihui Xie
+##' @keywords print
+##' @examples
+##' 
+##' \dontrun{
+##' if (interactive()) x = alzheimer.test()
+##' }
+##' 
 `alzheimer.test` <-
 function(char1 = c("9", "O", "M", "I", 
     "F", "D"), char2 = c("6", "C", "N", "T", "E", "O"), nr = 10, 
