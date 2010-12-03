@@ -13,7 +13,8 @@ tagCloud(tagData, htmlOutput = "tagCloud.html", SWFPath, JSPath,
     transparent = FALSE, tcolor = "333333", tcolor2 = "009900", 
     hicolor = "ff0000", distr = "true", tspeed = 100, version = 9, 
     bgcolor = "ffffff", useXML = FALSE, htmlTitle = "Tag Cloud", 
-    noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE)
+    noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE,
+    reserved = FALSE)
 }
 
 \arguments{
