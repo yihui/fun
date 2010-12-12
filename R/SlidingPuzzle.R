@@ -12,6 +12,8 @@
 ##' @param z the matrix of sliding puzzle, if z is specified, \code{size} will
 ##'   be omited.
 ##' @author Taiyun Wei
+##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
+##' Cairo graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
 ##' @references About the sliding puzzle:
 ##'   \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
 ##'
@@ -72,9 +74,6 @@ SlidingPuzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
     }
     z[!z]<-NA
 
-    if (.Platform$OS.type != "windows"){
-        X11(type = "Xlib")
-    }
     ## plot puzzles
     replot <- function(z) {
         bg <- ifelse(z, bg, "white")

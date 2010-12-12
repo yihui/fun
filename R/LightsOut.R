@@ -17,6 +17,8 @@
 ##' @param seed seed for random number generator.
 ##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}.
 ##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
+##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
+##' Cairo graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
 ##' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
 ##' @keywords iplot
 ##' @examples
@@ -57,8 +59,7 @@ LightsOut <- function(width = 5, height = 5,
         symbols(xv, yv, rectangles = matrix(1, length(xv), 2),
             inches = FALSE, fg = col.frame, bg = color, add = TRUE)
     }
-    if (.Platform$OS.type == 'windows')
-        dev.new(width = width, height = height) else X11(width, height, type = 'Xlib')
+    dev.new(width = width, height = height)
     par(mar = c(0, 0, 0, 0))
     plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5,
         width + 0.5), ylim = c(0.5, height + 0.5), axes = FALSE)
