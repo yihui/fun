@@ -12,7 +12,7 @@
 ##' @param cheat logical. If \code{TRUE} a matrix indicating the mines will be
 ##'   printed.
 ##' @param seed seed for random number generator.
-##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}.
+##' @param \dots other arguments passed to \code{\link[base]{set.seed}}.
 ##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
 ##' @references \url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
 ##' @keywords iplot
