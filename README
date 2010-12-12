@@ -6,4 +6,4 @@ To install this package, you need to use the Rd2roxygen package:
 library(Rd2roxygen)
 ## when the 'fun' directory is just under your working directory
 roxygen_and_build('fun')
-## or roxygen_and_build('fun', install=TRUE, check=TRUE)
+## or rab('fun', install=TRUE, check=TRUE)
