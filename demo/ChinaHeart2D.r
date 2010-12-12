@@ -6,7 +6,7 @@ n = 30000
 p = sort(runif(n, min = 0, max = pi))
 p = sin(p) + rnorm(n)
 par(mar = c(2, 0.1, 3, 0.1), mgp = c(0.5, 0, 0))
-plot(sort(rnorm(n)), -p, col = "red", pch = "¡¤",
+plot(sort(rnorm(n)), -p, col = "red", pch = ".",
     axes = FALSE, xlim = c(-3.6, 3.6), ylim = c(-4.4, 3.3), ylab = "",
     xlab = "China's 60th Anniversary", main = "Happy Birthday, China!")
 # stars
