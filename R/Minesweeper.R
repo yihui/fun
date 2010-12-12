@@ -23,6 +23,7 @@
 ##'
 Minesweeper <- function(width = 10, height = 10, mines = 20,
     text.cex = 2, cheat = FALSE, seed = NULL, ...) {
+    if (!interactive()) return(NULL)
     if (mines >= width * height) {
         stop("Are you a terrorist???")
     }
@@ -51,7 +52,8 @@ Minesweeper <- function(width = 10, height = 10, mines = 20,
         print(mine.mat)
     }
 
-    x11(width, height)
+    if (.Platform$OS.type == 'windows')
+        dev.new(width = width, height = height) else X11(width, height, type = 'Xlib')
     par(mar = c(0, 0, 0, 0))
     plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5,
         width + 0.5), ylim = c(0.5, height + 0.5), axes = FALSE)

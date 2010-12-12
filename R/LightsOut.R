@@ -20,14 +20,12 @@
 ##' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
 ##' @keywords iplot
 ##' @examples
-##'
-##' \dontrun{
 ##' LightsOut(width=5, height=5, steps=3)
-##' }
 ##'
 LightsOut <- function(width = 5, height = 5,
     steps = 3, cheat = FALSE, col.off = "black", col.on = "white",
     col.frame = "lightblue", seed = NULL, ...) {
+    if (!interactive()) return(NULL)
     zmat <- mat.ini <- matrix(1, height, width)
     trans <- function(z, x, y) {
         nr <- nrow(z)
@@ -59,7 +57,8 @@ LightsOut <- function(width = 5, height = 5,
         symbols(xv, yv, rectangles = matrix(1, length(xv), 2),
             inches = FALSE, fg = col.frame, bg = color, add = TRUE)
     }
-    x11(width, height)
+    if (.Platform$OS.type == 'windows')
+        dev.new(width = width, height = height) else X11(width, height, type = 'Xlib')
     par(mar = c(0, 0, 0, 0))
     plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5,
         width + 0.5), ylim = c(0.5, height + 0.5), axes = FALSE)
