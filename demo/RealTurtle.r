@@ -1,16 +1,16 @@
 ## A "Real" Turtle
 ## code by Linlin Yan <linlin.yan@cos.name>
-## URL: http://cos.name/bbs/read.php?tid=15876
+## URL: http://cos.name/cn/topic/15876
 turtle_x <- 0
 turtle_y <- 0
 turtle_direction <- 0
 turtle_color <- "white"
 turtle_drawing <- TRUE
-turtle_init <- function(width = 100, height = 100, 
+turtle_init <- function(width = 100, height = 100,
     mar = rep(0, 4), bg = "black", ...) {
     par(mar = mar)
     par(bg = bg)
-    plot(c(-width, width), c(-height, height), type = "n", xlab = "", 
+    plot(c(-width, width), c(-height, height), type = "n", xlab = "",
         ylab = "", axes = FALSE, ...)
     turtle_x <<- 0
     turtle_y <<- 0
@@ -98,4 +98,4 @@ draw_turtle <- function() {
     turtle_turn_right(170)
     turtle_forward(19)
 }
-draw_turtle() 
+draw_turtle()

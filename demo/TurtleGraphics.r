@@ -1,16 +1,16 @@
 ## Turtle Graphics
 ## code by Linlin Yan <linlin.yan@cos.name>
-## URL: http://cos.name/bbs/read.php?tid=15876
+## URL: http://cos.name/cn/topic/15876
 turtle_x <- 0
 turtle_y <- 0
 turtle_direction <- 0
 turtle_color <- "white"
 turtle_drawing <- TRUE
-turtle_init <- function(width = 100, height = 100, 
+turtle_init <- function(width = 100, height = 100,
     mar = rep(0, 4), bg = "black", ...) {
     par(mar = mar)
     par(bg = bg)
-    plot(c(-width, width), c(-height, height), type = "n", xlab = "", 
+    plot(c(-width, width), c(-height, height), type = "n", xlab = "",
         ylab = "", axes = FALSE, ...)
     turtle_x <<- 0
     turtle_y <<- 0
@@ -49,8 +49,7 @@ turtle_demo <- function() {
         turtle_forward(50)
         turtle_turn_right(90)
     }
-    cat("Press <Enter> to continue...")
-    readLines(n = 1)
+    readline("Press <Enter> to continue...")
     turtle_init()
     turtle_set_color("blue")
     for (i in 1:16) {
@@ -65,16 +64,14 @@ turtle_demo <- function() {
             turtle_turn_left(90)
         }
     }
-    cat("Press <Enter> to continue...")
-    readLines(n = 1)
+    readline("Press <Enter> to continue...")
     turtle_init()
     turtle_set_color("gold")
     for (i in 1:5) {
         turtle_forward(100)
         turtle_turn_right(144)
     }
-    cat("Press <Enter> to continue...")
-    readLines(n = 1)
+    readline("Press <Enter> to continue...")
     turtle_init()
     turtle_set_color("green")
     size <- 0.01
@@ -83,16 +80,14 @@ turtle_demo <- function() {
         turtle_turn_right(3)
         size <- size * 1.01
     }
-    cat("Press <Enter> to continue...")
-    readLines(n = 1)
+    readline("Press <Enter> to continue...")
     turtle_init()
     turtle_set_color("red")
     for (i in 1:20) {
         turtle_forward(50)
         turtle_turn_right(100)
     }
-    cat("Press <Enter> to continue...")
-    readLines(n = 1)
+    readline("Press <Enter> to continue...")
     turtle_init()
     turtle_set_color("yellow")
     for (i in 1:36) {
@@ -108,8 +103,7 @@ turtle_demo <- function() {
         }
         turtle_turn_right(10)
     }
-    cat("Press <Enter> to continue...")
-    readLines(n = 1)
+    readline("Press <Enter> to continue...")
     turtle_init()
     for (i in 1:25) {
         turtle_set_color(rgb(10 * i, 5 * i, 255 - (10 * i), maxColorValue = 255))
@@ -120,4 +114,4 @@ turtle_demo <- function() {
         turtle_turn_right(24)
     }
 }
-turtle_demo() 
+turtle_demo()

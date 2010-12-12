@@ -1,6 +1,6 @@
 ## Game of Life (http://en.wikipedia.org/wiki/The_Game_of_Life)
 ## code by Linlin Yan <linlin.yan@cos.name>
-## URL: http://cos.name/bbs/read.php?tid=15402
+## URL: http://cos.name/cn/topic/15402
 row <- 100
 col <- 100
 init_life <- function(p) {
@@ -35,4 +35,4 @@ while (TRUE) {
     draw_life(lives, generation)
     lives <- next_life(lives)
     generation <- generation + 1
-} 
+}
