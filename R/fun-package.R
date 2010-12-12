@@ -3,11 +3,12 @@
 ##' classical Mine sweeper and sliding puzzles.
 ##'
 ##' \tabular{ll}{ Package: \tab fun\cr Type: \tab Package\cr
-##' License: \tab GPL-2 | GPL-3\cr
+##' License: \tab GPL\cr
 ##' LazyLoad: \tab yes\cr }
 ##'
 ##' @name fun-package
 ##' @aliases fun-package fun
+##' @exportPattern "^[^\\.]"
 ##' @docType package
 ##' @author Yihui Xie, Taiyun Wei and Yixuan Qiu
 ##' @keywords package

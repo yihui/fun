@@ -17,9 +17,7 @@
 ##' @references \url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
 ##' @keywords iplot
 ##' @examples
-##' \dontrun{
 ##' Minesweeper(width=8, height=8, mines=10, text.cex=3)
-##' }
 ##'
 Minesweeper <- function(width = 10, height = 10, mines = 20,
     text.cex = 2, cheat = FALSE, seed = NULL, ...) {
