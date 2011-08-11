@@ -1,13 +1,17 @@
-	**************************************************
-	*						 *
-	*	       0.1-0 NEWS			 *
-	*						 *
-	**************************************************
-
 		CHANGES IN fun VERSION 0.1-0
 
 
 NEW FEATURES
 
-    o R can perform t-test, F test and so on, but sometimes 
-  we use R to test Alzheimer's disease; see alzheimer.test()
+  o R can perform t-test, F test and so on, but sometimes we use R to
+  test Alzheimer's disease; see alzheimer_test()
+
+  o lights_out() to play the "Lights Out" game
+
+  o mine_sweeper() to play the Minesweeper game
+
+  o sliding_puzzle() to play the Sliding Puzzle
+
+  o tower_of_hanoi() to watch the game Tower of Hanoi
+
+  o and other interesting functions
