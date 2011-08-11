@@ -92,11 +92,9 @@ alzheimer_test = function(char1 = c("9", "O", "M", "I",
         }
     }
     if (j >= 1) {
-        cat("\nThere are", sum(ans == 1), "correct answers in all",
-            j, "tests.\n")
+        cat("\nThere are", sum(ans == 1), "correct answers in all", j, "tests.\n")
         res = data.frame(char1[1:j], char2[1:j], tm1[1:j], tm2[1:j],
-            ans[1:j], matrix(ans.u[1:j, ], nrow = j), matrix(ans.t[1:j,
-                ], nrow = j))
+            ans[1:j], ans.u[1:j, , drop = FALSE], ans.t[1:j, , drop = FALSE])
         return(res)
     }
 }
