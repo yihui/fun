@@ -11,7 +11,8 @@
 ##' @docType package
 ##' @author Yihui Xie, Taiyun Wei and Yixuan Qiu
 ##' @keywords package
-##' @examples # TODO
+##' @examples ## See the examples in each function, or check out the demos
+##' demo(package = 'fun')
 NULL
 
 
