@@ -1,4 +1,4 @@
-##' Use R for Fun.
+##' Use R for Fun
 ##'
 ##' This is a collection of R games and other funny stuff, such as the
 ##' classical Mine sweeper and sliding puzzles.
