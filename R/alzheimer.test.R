@@ -21,6 +21,7 @@
 alzheimer.test = function(char1 = c("9", "O", "M", "I",
     "F", "D"), char2 = c("6", "C", "N", "T", "E", "O"), nr = 10,
     nc = 30, seed = NULL, ...) {
+    if (!interactive()) return()
     cat("This is a REAL neurological test. Sit comfortably and be calm.\n\n")
     mlen = max(length(char1), length(char2), length(nr), length(nc))
     char1 = rep(char1, length = mlen)

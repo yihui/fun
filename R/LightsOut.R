@@ -27,7 +27,7 @@
 LightsOut <- function(width = 5, height = 5,
     steps = 3, cheat = FALSE, col.off = "black", col.on = "white",
     col.frame = "lightblue", seed = NULL, ...) {
-    if (!interactive()) return(NULL)
+    if (!interactive()) return()
     zmat <- mat.ini <- matrix(1, height, width)
     trans <- function(z, x, y) {
         nr <- nrow(z)

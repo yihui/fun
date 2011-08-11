@@ -25,11 +25,11 @@
 ##' SlidingPuzzle(z=matrix(0:11, 3, 4))
 ##'
 SlidingPuzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
-    if (!interactive()) return(NULL)
 	  if(!is.null(size)){
 	      n <- size[1]
 	      m <- size[2]
 	  }
+    if (!interactive()) return()
 
 	  if(length(size)==1){
 		n <- m <- size

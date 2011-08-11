@@ -16,7 +16,7 @@
 ##' TowerOfHanoi(7)
 ##'
 TowerOfHanoi <- function(n) {
-    if (!interactive()) return(NULL)
+    if (!interactive()) return()
     tower <- list(1:n, NULL, NULL)
     color <- rainbow(n)
     bgcolor <- par("bg")

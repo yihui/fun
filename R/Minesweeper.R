@@ -23,7 +23,7 @@
 ##'
 Minesweeper <- function(width = 10, height = 10, mines = 20,
     text.cex = 2, cheat = FALSE, seed = NULL, ...) {
-    if (!interactive()) return(NULL)
+    if (!interactive()) return()
     if (mines >= width * height) {
         stop("Are you a terrorist???")
     }
