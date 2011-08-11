@@ -1,21 +1,23 @@
-##' Demonstrate the Tower of Hanoi puzzle in R.
-##' This function uses the recursive algorithm to solve the Tower of Hanoi
-##' puzzle, and demonstrates the game in animation.
+##' Demonstrate the Tower of Hanoi puzzle in R
 ##'
-##' This function was written by Linlin Yan <linlin.yan@@cos.name> in a Chinese
-##' forum (See 'References') to show the usage of recursive algorithm.
+##' This function uses the recursive algorithm to solve the Tower of
+##' Hanoi puzzle, and demonstrates the game in animation.
 ##'
+##' This function was written by Linlin Yan <linlin.yan@@cos.name> in
+##' a Chinese forum (See 'References') to show the usage of recursive
+##' algorithm.
 ##' @param n an integer indicating the number of disks on the rot.
 ##' @seealso \code{\link[graphics]{barplot}}
 ##' @references Original code: \url{http://cos.name/cn/topic/101199}
 ##'
-##' About the Tower of Hanoi: \url{http://en.wikipedia.org/wiki/Tower_of_Hanoi}
+##' About the Tower of Hanoi:
+##' \url{http://en.wikipedia.org/wiki/Tower_of_Hanoi}
 ##' @author Linlin Yan <\email{linlin.yan@@cos.name}>
 ##' @keywords dynamic
+##' @export
 ##' @examples
-##' TowerOfHanoi(7)
-##'
-TowerOfHanoi <- function(n) {
+##' tower_of_hanoi(7)
+tower_of_hanoi <- function(n) {
     if (!interactive()) return()
     tower <- list(1:n, NULL, NULL)
     color <- rainbow(n)

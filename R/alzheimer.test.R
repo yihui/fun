@@ -1,24 +1,25 @@
-##' Test Alzheimer's disease by finding out the different character in a character rectangle.
-##' Please try hard to find the letter "N" in 300 "M"s, one "6" in 300 "9"s,
-##' etc.
+##' Test Alzheimer's disease by finding out the different character in
+##' a character rectangle
 ##'
-##' Follow the guidelines and finish the test.
+##' Please try hard to find the letter "N" in 300 "M"s, one "6" in 300
+##' "9"s, etc.
 ##'
+##' Follow the instructions and finish the test.
 ##' @param char1 the 'background' character
 ##' @param char2 the character to be found out
 ##' @param nr number of rows of the character rectangle
 ##' @param nc number of columns
 ##' @param seed seed for random number generation
-##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}
-##' @return If at least one test item has been passed, a data.frame will be
-##'   returned telling the result of the test.
-##' @note Don't be too serious about this test. I'm no doctor, but I think this
-##'   will be a good present to your friends.
+##' @param ... other arguments passed to \code{\link[base]{set.seed}}
+##' @return If at least one test item has been passed, a data.frame
+##' will be returned telling the result of the test.
+##' @note Don't be too serious about this test. I'm no doctor, but I
+##' think this will be a good present to your friends.
 ##' @author Yihui Xie <\url{http://yihui.name}>
+##' @export
 ##' @examples
-##' if (interactive()) x = alzheimer.test()
-##'
-alzheimer.test = function(char1 = c("9", "O", "M", "I",
+##' x = alzheimer_test()
+alzheimer_test = function(char1 = c("9", "O", "M", "I",
     "F", "D"), char2 = c("6", "C", "N", "T", "E", "O"), nr = 10,
     nc = 30, seed = NULL, ...) {
     if (!interactive()) return()
@@ -61,14 +62,12 @@ alzheimer.test = function(char1 = c("9", "O", "M", "I",
                 "].\n\n\n", sep = "")
             ans = c(ans, 3)
             ans.user = c(NA, NA)
-        }
-        else {
+        } else {
             cat("\nPlease input the Row number and Column number respectively\n  when you find the character:\n")
             ans.user = scan(nmax = 2)
             if (length(ans.user) == 2 & is.numeric(ans.user)) {
                 ans = c(ans, as.integer(all(ans.user == ans.true)))
-            }
-            else ans = c(ans, 2)
+            } else ans = c(ans, 2)
             if (ans[length(ans)] != 1)
                 cat("\nWrong answer! :( \nThe correct answer should be: ",
                   ans.true, "\n\n\n")
@@ -83,8 +82,7 @@ alzheimer.test = function(char1 = c("9", "O", "M", "I",
                 flush.console()
                 Sys.sleep(0.1)
             }
-        }
-        else {
+        } else {
             for (i in 1:round(max(nc) * 1.5)) {
                 cat("  [All tests are finished; see the results> ",
                   rep("-", i), ">\r", sep = "")
@@ -102,4 +100,3 @@ alzheimer.test = function(char1 = c("9", "O", "M", "I",
         return(res)
     }
 }
-

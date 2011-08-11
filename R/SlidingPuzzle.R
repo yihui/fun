@@ -1,73 +1,75 @@
-##' Sliding puzzle in R.
-##' Use R to play sliding puzzle (currently only the Windows screen display).
+##' Sliding puzzle in R
 ##'
-##' If \code{size} is specified and \code{z} is \code{NULL}, then the function
-##' will generate a solvable sliding puzzle. In addition, the function only
-##' works under the Windows screen display because of the limitation of
-##' function \code{getGraphicsEvent}.
+##' Use R to play sliding puzzle (currently only the Windows screen
+##' display).
 ##'
-##' @param size two dimensional vector, the size of sliding puzzle. Note: the
-##'   element of \code{size} must be greater than 1.
+##' If \code{size} is specified and \code{z} is \code{NULL}, then the
+##' function will generate a solvable sliding puzzle. In addition, the
+##' function only works under the Windows screen display because of
+##' the limitation of function \code{getGraphicsEvent}.
+##' @param size two dimensional vector, the size of sliding
+##' puzzle. Note: the element of \code{size} must be greater than 1.
 ##' @param bg the background color of blocks.
-##' @param z the matrix of sliding puzzle, if z is specified, \code{size} will
-##'   be omited.
+##' @param z the matrix of sliding puzzle, if z is specified,
+##' \code{size} will be omited.
 ##' @author Taiyun Wei
-##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
-##' Cairo graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
+##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or
+##' the Cairo graphics device \code{Cairo()} in the package
+##' \pkg{cairoDevice}.
 ##' @references About the sliding puzzle:
-##'   \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
+##' \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
 ##'
 ##' How to Solve a Slider Puzzle:
-##'   \url{http://www.justadventure.com/articles/Slider/Slider.shtm}
+##' \url{http://www.justadventure.com/articles/Slider/Slider.shtm}
 ##' @keywords iplot
+##' @export
 ##' @examples
-##' SlidingPuzzle(c(3,3))
-##' SlidingPuzzle(z=matrix(0:11, 3, 4))
-##'
-SlidingPuzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
-	  if(!is.null(size)){
-	      n <- size[1]
-	      m <- size[2]
-	  }
+##' sliding_puzzle(c(3,3))
+##' sliding_puzzle(z=matrix(0:11, 3, 4))
+sliding_puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
     if (!interactive()) return()
+    if(!is.null(size)){
+        n <- size[1]
+        m <- size[2]
+    }
 
-	  if(length(size)==1){
-		n <- m <- size
-	  }
+    if(length(size)==1){
+        n <- m <- size
+    }
 
-	  if(!is.null(z)){
-		  n <- dim(z)[1]
-		  m <- dim(z)[2]
-		  if(!is.null(size))
-			warning("Because \"z\" is specialized, parameter \"size\" will be omitted.")
-	  }
+    if(!is.null(z)){
+        n <- dim(z)[1]
+        m <- dim(z)[2]
+        if(!is.null(size))
+            warning("Because \"z\" is specialized, parameter \"size\" will be omitted.")
+    }
 
-	  z.right <- matrix(1:(n*m), n, byrow = TRUE)
-	  z.right[n,m]<- 0
+    z.right <- matrix(1:(n*m), n, byrow = TRUE)
+    z.right[n,m]<- 0
 
-	  ## calculate inverse number
-	  neg_seq.length <- function(x){
-	  	len <- 0
-	  	for(i in 1:(length(x) - 1)){
-	  		tmp <- x[(i+1):length(x)] - x[i]
-	  		len <- len + sum(tmp < 0)
-	  	}
-	  }
+    ## calculate inverse number
+    neg_seq.length <- function(x){
+        len <- 0
+        for(i in 1:(length(x) - 1)){
+            tmp <- x[(i+1):length(x)] - x[i]
+            len <- len + sum(tmp < 0)
+        }
+    }
 
-	  len.right <- neg_seq.length(as.vector(z.right)) + n + m
+    len.right <- neg_seq.length(as.vector(z.right)) + n + m
 
 
     if(is.null(z))
         z <- matrix(sample(0:(n*m - 1)), n)
-	else {
+    else {
         len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))
-		if((len.right%%2)!=(len.z%%2))
-			stop("The sliding puzzle is insoluble!")
-	}
+        if((len.right%%2)!=(len.z%%2))
+            stop("The sliding puzzle is insoluble!")
+    }
 
 
     ## guarantee the game can be solved
-	len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))
+    len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))
     while((len.right%%2)!=(len.z%%2)| (all(z==z.right)) ){
     	z <- matrix(sample(0:(n*m - 1)), n)
     	len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))
@@ -80,16 +82,16 @@ SlidingPuzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
         fg <- ifelse(z, bg, "white")
         par(mar = c(0, 0, 0, 0), bg = "white")
         plot(c(0, m), c(0, n), type = "n",axes = FALSE, asp = 1, xlab = "",
-            ylab = "")
+             ylab = "")
         segments(0:m, rep(0, m + 1), 0:m, rep(n, m + 1), col = "grey",
-            lwd = 2)
+                 lwd = 2)
         segments(rep(0, n + 1), 0:n, rep(m, n + 1), 0:n, col = "grey",
-            lwd = 2)
+                 lwd = 2)
         symbols(0.5 + rep(0:(m - 1), each = n), 0.5 + rep((n -
-            1):0, m), squares = rep(0.9, n*m), add = TRUE, inches = FALSE,
-            fg = as.vector(fg), bg = as.vector(bg))
+                                     1):0, m), squares = rep(0.9, n*m), add = TRUE, inches = FALSE,
+                fg = as.vector(fg), bg = as.vector(bg))
         text(0.5 + rep(0:(m - 1), each = n), 0.5 + rep((n -
-            1):0, m), as.vector(z), cex = 3)
+                                  1):0, m), as.vector(z), cex = 3)
     }
 
     ##push function
@@ -108,7 +110,7 @@ SlidingPuzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
 
     count <- 0
     mousedown <- function(buttons, x, y) {
-    	  plx <- grconvertX(x, "ndc", "user")
+        plx <- grconvertX(x, "ndc", "user")
         ply <- grconvertY(y, "ndc", "user")
         m.col <- ceiling(plx)
         m.row <- n - floor(ply)
@@ -130,13 +132,13 @@ SlidingPuzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
         replot(z)
         flag <- z == z.right
         if (all(flag[!is.na(flag)])){
-        	paste("You win! Time:", round((proc.time() - ptm)[3],2), "seconds.")
+            paste("You win! Time:", round((proc.time() - ptm)[3],2), "seconds.")
         }
     }
 
-	ptm <- proc.time()
-	windows(5, 5)
+    ptm <- proc.time()
+    windows(5, 5)
     replot(z)
-	getGraphicsEvent("Game begin!", onMouseDown = mousedown)
+    getGraphicsEvent("Game begin!", onMouseDown = mousedown)
 
 }

@@ -1,30 +1,33 @@
-##' Play the ``Lights Out'' game in R.
+##' Play the ``Lights Out'' game in R
 ##'
-##' In default, the white squares in the plot denote the lights that are
-##' on, and black ones for the closed. When you click on a light, this
-##' light as well as the four neighbors will switch theirs status. Your
-##' mission is to close all the windows.
+##' By default, the white squares in the plot denote the lights that
+##' are on, and black ones for the off. When you click on a light,
+##' this light as well as the four neighbors will switch theirs
+##' status. Your mission is to close all the lights.
 ##'
-##' @param width number of lights in x axis.
-##' @param height number of lights in y axis.
-##' @param steps number of ``seed'' lights to initialize the puzzle. In general,
-##'   the larger \code{steps} is, the more complex this puzzle may be.
-##' @param cheat logical. If \code{TRUE} a data frame indicating the steps to
-##'   solve this puzzle will be printed.
-##' @param col.off color when lights off.
-##' @param col.on color when lights on.
-##' @param col.frame color of lights border.
-##' @param seed seed for random number generator.
-##' @param \dots other arguments passed to \code{\link[base:Random]{set.seed}}.
+##' @param width number of lights in x axis
+##' @param height number of lights in y axis
+##' @param steps number of ``seed'' lights to initialize the
+##' puzzle. In general, the larger \code{steps} is, the more complex
+##' this puzzle may be
+##' @param cheat logical. If \code{TRUE} a data frame indicating the
+##' steps to solve this puzzle will be printed
+##' @param col.off color when lights off
+##' @param col.on color when lights on
+##' @param col.frame color of lights border
+##' @param seed seed for random number generator
+##' @param ... other arguments passed to \code{\link[base]{set.seed}}
 ##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
-##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
-##' Cairo graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
+##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or
+##' the Cairo graphics device \code{Cairo()} in the package
+##' \pkg{cairoDevice}.
 ##' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
 ##' @keywords iplot
+##' @export
 ##' @examples
-##' LightsOut(width=5, height=5, steps=3)
+##' lights_out(width=5, height=5, steps=3)
 ##'
-LightsOut <- function(width = 5, height = 5,
+lights_out <- function(width = 5, height = 5,
     steps = 3, cheat = FALSE, col.off = "black", col.on = "white",
     col.frame = "lightblue", seed = NULL, ...) {
     if (!interactive()) return()

@@ -1,27 +1,27 @@
-##' Play the Miner game in R.
+##' Play the Miner game in R
 ##'
-##' The controls should be familiar to you: Click the left mouse button to dig
-##' in an area, and right button to mark or unmark the area with flags.
-##'
-##' @param width number of grids in horizontal axis.
-##' @param height number of grids in vertical axis.
-##' @param mines number of mines.
-##' @param text.cex the amount by which text in graphics should be magnified
-##'   relative to the default. Adjust this parameter when the size of text
-##'   doesn't fit the grid.
-##' @param cheat logical. If \code{TRUE} a matrix indicating the mines will be
-##'   printed.
-##' @param seed seed for random number generator.
-##' @param \dots other arguments passed to \code{\link[base]{set.seed}}.
+##' The controls should be familiar to you: Click the left mouse
+##' button to dig in an area, and right button to mark or unmark the
+##' area with flags.
+##' @param width number of grids in horizontal axis
+##' @param height number of grids in vertical axis
+##' @param mines number of mines
+##' @param text.cex the amount by which text in graphics should be
+##' magnified relative to the default. Adjust this parameter when the
+##' size of text doesn't fit the grid
+##' @param cheat logical. If \code{TRUE} a matrix indicating the mines
+##' will be printed
+##' @param seed seed for random number generator
+##' @param ... other arguments passed to \code{\link[base]{set.seed}}
 ##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
 ##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
 ##' Cairo graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
 ##' @references \url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
 ##' @keywords iplot
+##' @export
 ##' @examples
-##' Minesweeper(width=8, height=8, mines=10, text.cex=3)
-##'
-Minesweeper <- function(width = 10, height = 10, mines = 20,
+##' mine_sweeper(width=8, height=8, mines=10, text.cex=3)
+mine_sweeper <- function(width = 10, height = 10, mines = 20,
     text.cex = 2, cheat = FALSE, seed = NULL, ...) {
     if (!interactive()) return()
     if (mines >= width * height) {
