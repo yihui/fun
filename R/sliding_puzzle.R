@@ -24,9 +24,13 @@
 ##' @keywords iplot
 ##' @export
 ##' @examples
-##' sliding_puzzle(c(3,3))
+##' ## should use Xlib for the x11() device under *nix, e.g
+##' \dontrun{if (.Platform$OS.type == 'windows') x11() else x11(type = 'Xlib')}
+##'
+##' sliding_puzzle()
+##'
 ##' sliding_puzzle(z=matrix(0:11, 3, 4))
-sliding_puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
+sliding_puzzle <- function(size = c(3, 3), bg = "lightblue", z = NULL) {
     if (!interactive()) return()
     if(!is.null(size)){
         n <- size[1]
@@ -137,7 +141,6 @@ sliding_puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
     }
 
     ptm <- proc.time()
-    windows(5, 5)
     replot(z)
     getGraphicsEvent("Game begin!", onMouseDown = mousedown)
 

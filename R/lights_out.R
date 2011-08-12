@@ -25,8 +25,10 @@
 ##' @keywords iplot
 ##' @export
 ##' @examples
-##' lights_out(width=5, height=5, steps=3)
+##' ## should use Xlib for the x11() device under *nix, e.g
+##' \dontrun{if (.Platform$OS.type == 'windows') x11() else x11(type = 'Xlib')}
 ##'
+##' lights_out()
 lights_out <- function(width = 5, height = 5,
     steps = 3, cheat = FALSE, col.off = "black", col.on = "white",
     col.frame = "lightblue", seed = NULL) {
@@ -60,7 +62,6 @@ lights_out <- function(width = 5, height = 5,
         symbols(xv, yv, rectangles = matrix(1, length(xv), 2),
             inches = FALSE, fg = col.frame, bg = color, add = TRUE)
     }
-    dev.new(width = width, height = height)
     par(mar = c(0, 0, 0, 0))
     plot(1, type = "n", asp = 1, xlab = "", ylab = "", xlim = c(0.5,
         width + 0.5), ylim = c(0.5, height + 0.5), axes = FALSE)
