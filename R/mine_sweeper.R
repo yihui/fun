@@ -106,7 +106,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
             buttons == 1) {
             return(ms)
         }
-        else if (buttons == 0) {
+        if (buttons == 0) {
             if (current.status == 0) {
                 if (current.mat == -1) {
                   text(rep(1:width, rep(height, width)), height +
@@ -160,7 +160,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                 return(ms)
             }
         }
-        else if (buttons == 2) {
+        if (buttons == 2) {
             if (current.status == 0) {
                 ms[height + 1 - ply, plx] <- 2
                 plot.flag(plx, ply)
@@ -177,9 +177,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                 return(ms)
             }
         }
-        else {
-            return(ms)
-        }
+        return(ms)
     }
 
     while (1) {
