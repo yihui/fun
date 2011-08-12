@@ -17,7 +17,7 @@
 ##' @export
 ##' @examples
 ##' tower_of_hanoi(7)
-tower_of_hanoi <- function(n) {
+tower_of_hanoi <- function(n = 7) {
     if (!interactive()) return()
     tower <- list(1:n, NULL, NULL)
     color <- rainbow(n)
