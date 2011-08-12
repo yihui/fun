@@ -6,6 +6,10 @@
 ##' \tabular{ll}{ Package: \tab fun\cr Type: \tab Package\cr License:
 ##' \tab GPL\cr LazyLoad: \tab yes\cr }
 ##'
+##' New games are always welcome; if you know GIT and want to join the
+##' development, please go to \url{https://github.com/yihui/fun}; or
+##' simply contribute ideas at
+##' \url{https://github.com/yihui/fun/issues}.
 ##' @name fun-package
 ##' @aliases fun
 ##' @docType package
