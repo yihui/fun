@@ -21,15 +21,15 @@ tower_of_hanoi <- function(n = 7) {
     if (!interactive()) return()
     tower <- list(1:n, NULL, NULL)
     color <- rainbow(n)
+    par(mfrow = c(1, 3), mar = rep(0, 4), ann = FALSE)
     bgcolor <- par("bg")
     if (bgcolor == "transparent")
         bgcolor <- "white"
 
     draw.hanoi <- function() {
         for (i in 1:3) {
-            screen(i)
             plot(c(-n, n), c(0, n + 2), type = "n", xlab = "",
-                ylab = "")
+                ylab = "", axes = FALSE)
             rect(-n, 0, n, n + 2, border = bgcolor, col = bgcolor)
             if (length(tower[[i]]) > 0) {
                 barplot(rev(tower[[i]]), add = TRUE, horiz = TRUE,
@@ -55,9 +55,6 @@ tower_of_hanoi <- function(n = 7) {
             Sys.sleep(0.5)
         }
     }
-
-    close.screen(all = TRUE)
-    split.screen(c(1, 3))
 
     draw.hanoi()
     move.hanoi(n, 1, 2, 3)
