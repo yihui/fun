@@ -92,6 +92,8 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
         return(list(zeroes = zeroes, areas = areas))
     }
     mousedown <- function(buttons, x, y) {
+        ## at least under Ubuntu, right click leads to buttons = c(0, 1)
+        if (length(buttons) == 2) buttons <- 2
         color <- c("white", "grey", "DarkBlue", "ForestGreen",
             "brown", "green", "blue", "yellow", "orange", "red")
         plx <- round(grconvertX(x, "ndc", "user"))
