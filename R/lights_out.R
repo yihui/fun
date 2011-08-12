@@ -29,7 +29,7 @@
 ##'
 lights_out <- function(width = 5, height = 5,
     steps = 3, cheat = FALSE, col.off = "black", col.on = "white",
-    col.frame = "lightblue", seed = NULL, ...) {
+    col.frame = "lightblue", seed = NULL) {
     if (!interactive()) return()
     zmat <- mat.ini <- matrix(1, height, width)
     trans <- function(z, x, y) {
@@ -42,9 +42,7 @@ lights_out <- function(width = 5, height = 5,
         z[mrow, y] <- z[mrow, y] * (-1)
         return(z)
     }
-    if (!is.null(seed)) {
-        set.seed(seed, ...)
-    }
+    if (!is.null(seed)) set.seed(seed)
     grid.x <- sample(1:height, steps, replace = TRUE)
     grid.y <- sample(1:width, steps, replace = TRUE)
     if (cheat) {

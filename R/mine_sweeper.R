@@ -22,7 +22,7 @@
 ##' @examples
 ##' mine_sweeper(width=8, height=8, mines=10, text.cex=3)
 mine_sweeper <- function(width = 10, height = 10, mines = 20,
-    text.cex = 2, cheat = FALSE, seed = NULL, ...) {
+    text.cex = 2, cheat = FALSE, seed = NULL) {
     if (!interactive()) return()
     if (mines >= width * height) {
         stop("Are you a terrorist???")
@@ -32,9 +32,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
     }
     m <- rep(0, width * height)
     mat.status <- matrix(m, height, width)
-    if (!is.null(seed)) {
-        set.seed(seed, ...)
-    }
+    if (!is.null(seed)) set.seed(seed)
     mine.index <- sample(1:(width * height), mines)
     m[mine.index] <- -10
     mine.mat <- matrix(m, height, width)
