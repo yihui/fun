@@ -14,4 +14,6 @@ NEW FEATURES
 
   o tower_of_hanoi() to watch the game Tower of Hanoi
 
+  o gomoku(), the game of ``Five in a row''
+
   o and other interesting functions
