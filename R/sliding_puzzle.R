@@ -13,9 +13,9 @@
 ##' @param z the matrix of sliding puzzle, if z is specified,
 ##' \code{size} will be omited.
 ##' @author Taiyun Wei
-##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or
-##' the Cairo graphics device \code{Cairo()} in the package
-##' \pkg{cairoDevice}.
+##' @note Linux/Mac users have to use \code{\link[grDevices]{X11}(type
+##' = 'Xlib')} or the Cairo graphics device \code{Cairo()} in the
+##' package \pkg{cairoDevice}.
 ##' @references About the sliding puzzle:
 ##' \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
 ##'

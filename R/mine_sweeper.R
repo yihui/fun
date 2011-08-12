@@ -12,10 +12,10 @@
 ##' @param cheat logical. If \code{TRUE} a matrix indicating the mines
 ##' will be printed
 ##' @param seed seed for random number generator
-##' @param ... other arguments passed to \code{\link[base]{set.seed}}
 ##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
-##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
-##' Cairo graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
+##' @note Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
+##' Cairo graphics device \code{Cairo()} in the package
+##' \pkg{cairoDevice}.
 ##' @references \url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
 ##' @keywords iplot
 ##' @export

@@ -16,10 +16,9 @@
 ##' @param col.on color when lights on
 ##' @param col.frame color of lights border
 ##' @param seed seed for random number generator
-##' @param ... other arguments passed to \code{\link[base]{set.seed}}
 ##' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
-##' @note For Linux/Mac users have to use \code{X11(type = 'Xlib')} or
-##' the Cairo graphics device \code{Cairo()} in the package
+##' @note Linux/Mac users have to use \code{X11(type = 'Xlib')} or the
+##' Cairo graphics device \code{Cairo()} in the package
 ##' \pkg{cairoDevice}.
 ##' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
 ##' @keywords iplot
