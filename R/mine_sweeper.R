@@ -115,7 +115,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                   plot.mine(mine.col, height + 1 - mine.row,
                     color = "black")
                   plot.mine(plx, ply, color = "red")
-                  cat("Game Over!")
+                  cat("Game Over!\n")
                   return(-1)
                 }
                 else if (current.mat == 0) {
@@ -138,7 +138,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                   }
                   if (sum(ms == 1) == width * height - mines) {
                     plot.flag(mine.col, height + 1 - mine.row)
-                    cat("You win!")
+                    cat("You win!\n")
                     return(1)
                   }
                   return(ms)
@@ -149,7 +149,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                   if (sum(ms == 1) == width * height - mines -
                     1) {
                     plot.flag(mine.col, height + 1 - mine.row)
-                    cat("You win!")
+                    cat("You win!\n")
                     return(1)
                   }
                   ms[height + 1 - ply, plx] <- 1
