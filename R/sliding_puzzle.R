@@ -41,7 +41,7 @@ sliding_puzzle <- function(size = NULL, bg = "lightblue", z = NULL) {
         n <- dim(z)[1]
         m <- dim(z)[2]
         if(!is.null(size))
-            warning("Because \"z\" is specialized, parameter \"size\" will be omitted.")
+            warning("Because \"z\" is specified, parameter \"size\" will be ignored.")
     }
 
     z.right <- matrix(1:(n*m), n, byrow = TRUE)
