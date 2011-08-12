@@ -5,9 +5,21 @@ Version: 0.1-0
 Date: 2010-12-19
 Author: Yihui Xie, Taiyun Wei and Yixuan Qiu
 Maintainer: Yihui Xie <xie@yihui.name>
-Enhances: rgl
-Description: This is a collection of R games and other funny stuff, such as the classical Mine sweeper and sliding puzzles.
+Description: This is a collection of R games and other
+    funny stuff, such as the classical Mine sweeper and
+    sliding puzzles.
 License: GPL
 LazyLoad: yes
-URL: http://github.com/yihui/fun
+URL: https://github.com/yihui/fun
 BugReports: https://github.com/yihui/fun/issues
+Collate:
+    'fun-package.R'
+    'htmlspecialchars.R'
+    'shutdown.R'
+    'alzheimer_test.R'
+    'lights_out.R'
+    'mine_sweeper.R'
+    'random_password.R'
+    'sliding_puzzle.R'
+    'tag_cloud.R'
+    'tower_of_hanoi.R'
