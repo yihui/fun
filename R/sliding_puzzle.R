@@ -58,14 +58,15 @@ sliding_puzzle <- function(size = c(3, 3), bg = "lightblue", z = NULL) {
             tmp <- x[(i+1):length(x)] - x[i]
             len <- len + sum(tmp < 0)
         }
+		return(len)
     }
 
     len.right <- neg_seq.length(as.vector(z.right)) + n + m
 
 
-    if(is.null(z))
+    if(is.null(z)){
         z <- matrix(sample(0:(n*m - 1)), n)
-    else {
+    } else {
         len.z <- neg_seq.length(as.vector(z)) + sum(which(z==0, arr.ind = TRUE))
         if((len.right%%2)!=(len.z%%2))
             stop("The sliding puzzle is insoluble!")
