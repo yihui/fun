@@ -30,6 +30,7 @@
 ##' sliding_puzzle()
 ##'
 ##' sliding_puzzle(z=matrix(0:11, 3, 4))
+
 sliding_puzzle <- function(size = c(3, 3), bg = "lightblue", z = NULL) {
     if (!interactive()) return()
     if(!is.null(size)){
