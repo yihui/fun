@@ -1,12 +1,9 @@
 ##' Sliding puzzle in R
 ##'
-##' Use R to play sliding puzzle (currently only the Windows screen
-##' display).
+##' Use R to play sliding puzzle
 ##'
 ##' If \code{size} is specified and \code{z} is \code{NULL}, then the
-##' function will generate a solvable sliding puzzle. In addition, the
-##' function only works under the Windows screen display because of
-##' the limitation of function \code{getGraphicsEvent}.
+##' function will generate a solvable sliding puzzle. 
 ##' @param size two dimensional vector, the size of sliding
 ##' puzzle. Note: the element of \code{size} must be greater than 1.
 ##' @param bg the background color of blocks.
@@ -30,7 +27,6 @@
 ##' sliding_puzzle()
 ##'
 ##' sliding_puzzle(z=matrix(0:11, 3, 4))
-
 sliding_puzzle <- function(size = c(3, 3), bg = "lightblue", z = NULL) {
     if (!interactive()) return()
     if(!is.null(size)){
