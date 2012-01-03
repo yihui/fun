@@ -158,7 +158,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                 inches = FALSE, fg = "black", bg = "black", add = TRUE);
         segments(x - 0.1, y + 0.3, x - 0.1, y - 0.2);
     }
-    search.zeroes = function(pos, mat) {
+    search.zeroes <- function(pos, mat) {
         nr <- nrow(mat);
         nc <- ncol(mat);
         x <- ifelse(pos %% nr == 0, nr, pos %% nr);
@@ -184,13 +184,17 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
         }
         current.status <- ms[height + 1 - ply, plx];
         current.mat <- mine.mat[height + 1 - ply, plx];
+        ## Left button
         if (buttons == 0) {
+            ## Untested area
             if (current.status == 0) {
+                ## Is a mine
                 if (current.mat == -1) {
                     plot.mine(mine.col, height + 1 - mine.row);
                     plot.mine.explode(plx, ply);
                     cat("Game Over!\n");
                     return(-1);
+                  ## Blank area
                 } else if (current.mat == 0) {
                     pos <- height * plx + 1 - ply;
                     while (TRUE) {
@@ -214,6 +218,7 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                         return(1);
                     }
                     return(ms);
+                  ## Numbered area
                 } else {
                     plot.num(plx, ply, current.mat);
                     if (sum(ms == 1) == width * height - mines -1) {
@@ -224,19 +229,24 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
                     ms[height + 1 - ply, plx] <- 1;
                     return(ms);
                 }
+              ## Tested area or flag -- no action
             } else {
                 return(ms);
             }
         }
+        ## Right button
         if (buttons == 2) {
+            ## Blank area
             if (current.status == 0) {
                 ms[height + 1 - ply, plx] <- 2;
                 plot.flag(plx, ply);
                 return(ms);
+              ## Flag
             } else if (current.status == 2) {
                 ms[height + 1 - ply, plx] <- 0;
                 plot.grid(plx, ply);
                 return(ms);
+              ## Numbered area -- no action
             } else {
                 return(ms);
             }
@@ -250,3 +260,4 @@ mine_sweeper <- function(width = 10, height = 10, mines = 20,
         mat.status <- getGraphicsEvent(prompt = "", onMouseDown = mousedown);
     }
 }
+
