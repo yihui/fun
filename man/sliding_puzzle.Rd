@@ -15,15 +15,12 @@ sliding_puzzle(size = c(3, 3), bg = "lightblue", z = NULL)
   \code{size} will be omited.}
 }
 \description{
-  Use R to play sliding puzzle (currently only the Windows
-  screen display).
+  Use R to play sliding puzzle
 }
 \details{
   If \code{size} is specified and \code{z} is \code{NULL},
   then the function will generate a solvable sliding
-  puzzle. In addition, the function only works under the
-  Windows screen display because of the limitation of
-  function \code{getGraphicsEvent}.
+  puzzle.
 }
 \note{
   Linux/Mac users have to use

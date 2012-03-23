@@ -1,9 +1,9 @@
 \name{mine_sweeper}
 \alias{mine_sweeper}
-\title{Play the Miner game in R}
+\title{Play the Mine Sweeper game in R}
 \usage{
 mine_sweeper(width = 10, height = 10, mines = 20, 
-    text.cex = 2, cheat = FALSE, seed = NULL)
+    cheat = FALSE, seed = NULL)
 }
 \arguments{
   \item{width}{number of grids in horizontal axis}
@@ -11,10 +11,6 @@ mine_sweeper(width = 10, height = 10, mines = 20,
   \item{height}{number of grids in vertical axis}
 
   \item{mines}{number of mines}
-
-  \item{text.cex}{the amount by which text in graphics
-  should be magnified relative to the default. Adjust this
-  parameter when the size of text doesn't fit the grid}
 
   \item{cheat}{logical. If \code{TRUE} a matrix indicating
   the mines will be printed}

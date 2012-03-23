@@ -2,9 +2,9 @@
 \alias{tag_cloud}
 \title{Creating Tag Cloud in R (with Flash and JavaScript)}
 \usage{
-tag_cloud(tagData, htmlOutput = "tagCloud.html", SWFPath, 
-    JSPath, divId = "tagCloudId", width = 600, height = 400, 
-    transparent = FALSE, tcolor = "333333", tcolor2 = "009900", 
+tag_cloud(tagData, htmlOutput = "tagCloud.html", SWFPath = "tagcloud.swf", 
+    JSPath = "swfobject.js", divId = "tagCloudId", width = 600, 
+    height = 400, transparent = FALSE, tcolor = "333333", tcolor2 = "009900", 
     hicolor = "ff0000", distr = "true", tspeed = 100, version = 9, 
     bgcolor = "ffffff", useXML = FALSE, htmlTitle = "Tag Cloud", 
     noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE, 
@@ -68,8 +68,8 @@ tag_cloud(tagData, htmlOutput = "tagCloud.html", SWFPath,
 \description{
   Use R to write tag data (tag words, frequency, hyperlinks
   and colors, etc) into JavaScript, and the JavaScript code
-  will generate a Flash movie.  Finally the tag cloud can
-  be created with fantastic 3D rotation effect.
+  will generate a Flash movie. Finally the tag cloud can be
+  created with fantastic 3D rotation effect.
 }
 \details{
   This function is based on the WordPress plugin
