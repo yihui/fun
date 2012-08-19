@@ -37,7 +37,9 @@ alzheimer_test(char1 = c("9", "O", "M", "I", "F",
   I think this will be a good present to your friends.
 }
 \examples{
+\dontrun{
 x = alzheimer_test()
+}
 }
 \author{
   Yihui Xie <\url{http://yihui.name}>

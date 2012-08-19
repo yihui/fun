@@ -19,7 +19,9 @@ tower_of_hanoi(n = 7)
   'References') to show the usage of recursive algorithm.
 }
 \examples{
-tower_of_hanoi(7)
+\dontrun{
+tower_of_hanoi(4)
+}
 }
 \author{
   Linlin Yan <\email{linlin.yan@cos.name}>
