@@ -1,7 +1,7 @@
 Package: fun
 Type: Package
 Title: Use R for Fun
-Version: 0.1-0
+Version: 0.1.1
 Date: 2011-08-12
 Author: Yihui Xie, Taiyun Wei and Yixuan Qiu
 Maintainer: Yihui Xie <xie@yihui.name>
