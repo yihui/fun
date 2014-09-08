@@ -11,10 +11,11 @@
 #'
 #'   About the Tower of Hanoi: \url{http://en.wikipedia.org/wiki/Tower_of_Hanoi}
 #' @author Linlin Yan <\email{linlin.yan@@cos.name}>
-#' @keywords dynamic
 #' @export
 #' @examples
+#' \dontrun{
 #' tower_of_hanoi(7)
+#' }
 tower_of_hanoi <- function(n = 7) {
   if (!interactive()) return()
   tower <- list(1:n, NULL, NULL)

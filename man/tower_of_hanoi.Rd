@@ -17,7 +17,7 @@ forum (See 'References') to show the usage of recursive algorithm.
 }
 \examples{
 \dontrun{
-tower_of_hanoi(4)
+tower_of_hanoi(7)
 }
 }
 \author{
@@ -31,4 +31,3 @@ Original code: \url{http://cos.name/cn/topic/101199}
 \seealso{
 \code{\link[graphics]{barplot}}
 }
-\keyword{dynamic}

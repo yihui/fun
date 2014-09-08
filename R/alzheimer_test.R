@@ -15,7 +15,9 @@
 #' @author Yihui Xie <\url{http://yihui.name}>
 #' @export
 #' @examples
+#' \dontrun{
 #' x = alzheimer_test()
+#' }
 alzheimer_test = function(
   char1 = c("9", "O", "M", "I", "F", "D"),
   char2 = c("6", "C", "N", "T", "E", "O"),
