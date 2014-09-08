@@ -2,44 +2,37 @@
 \alias{mine_sweeper}
 \title{Play the Mine Sweeper game in R}
 \usage{
-mine_sweeper(width = 10, height = 10, mines = 20, 
-    cheat = FALSE, seed = NULL)
+mine_sweeper(width = 10, height = 10, mines = 20, cheat = FALSE)
 }
 \arguments{
-  \item{width}{number of grids in horizontal axis}
+\item{width}{number of grids in horizontal axis}
 
-  \item{height}{number of grids in vertical axis}
+\item{height}{number of grids in vertical axis}
 
-  \item{mines}{number of mines}
+\item{mines}{number of mines}
 
-  \item{cheat}{logical. If \code{TRUE} a matrix indicating
-  the mines will be printed}
-
-  \item{seed}{seed for random number generator}
+\item{cheat}{logical. If \code{TRUE} a matrix indicating the mines will be
+printed}
 }
 \description{
-  The controls should be familiar to you: Click the left
-  mouse button to dig in an area, and right button to mark
-  or unmark the area with flags.
+The controls should be familiar to you: Click the left mouse button to dig in
+an area, and right button to mark or unmark the area with flags.
 }
 \note{
-  Linux/Mac users have to use \code{X11(type = 'Xlib')} or
-  the Cairo graphics device \code{Cairo()} in the package
-  \pkg{cairoDevice}.
+Linux/Mac users have to use \code{X11(type = 'Xlib')} or the Cairo
+  graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
 }
 \examples{
 ## should use Xlib for the x11() device under *nix, e.g
-\dontrun{
-if (.Platform$OS.type == "windows") 
-    x11() else x11(type = "Xlib")
+if (interactive()) {
+    if (.Platform$OS.type == "windows") 
+        x11() else x11(type = "Xlib")
+    mine_sweeper()
 }
-
-mine_sweeper()
 }
 \author{
-  Yixuan Qiu \email{yixuan.qiu@cos.name}
+Yixuan Qiu \email{yixuan.qiu@cos.name}
 }
 \references{
-  \url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
+\url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
 }
-\keyword{iplot}

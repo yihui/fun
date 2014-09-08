@@ -12,15 +12,3 @@ License: GPL
 LazyData: yes
 URL: https://github.com/yihui/fun
 BugReports: https://github.com/yihui/fun/issues
-Collate:
-    'fun-package.R'
-    'htmlspecialchars.R'
-    'shutdown.R'
-    'alzheimer_test.R'
-    'lights_out.R'
-    'mine_sweeper.R'
-    'random_password.R'
-    'sliding_puzzle.R'
-    'tag_cloud.R'
-    'tower_of_hanoi.R'
-    'gomoku.R'
