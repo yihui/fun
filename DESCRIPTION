@@ -5,9 +5,8 @@ Version: 0.1-0
 Date: 2011-08-12
 Author: Yihui Xie, Taiyun Wei and Yixuan Qiu
 Maintainer: Yihui Xie <xie@yihui.name>
-Description: This is a collection of R games and other
-    funny stuff, such as the classical Mine sweeper and
-    sliding puzzles.
+Description: This is a collection of R games and other funny stuff, such as the
+    classical Mine sweeper and sliding puzzles.
 License: GPL
 LazyData: yes
 URL: https://github.com/yihui/fun
