@@ -3,7 +3,9 @@ Type: Package
 Title: Use R for Fun
 Version: 0.1.1
 Date: 2011-08-12
-Author: Yihui Xie, Taiyun Wei and Yixuan Qiu
+Authors@R: c(person("Yixuan", "Qiu", role = "aut"),
+    person("Taiyun", "Wei", role = "aut"),
+    person("Yihui", "Xie", role = c("aut", "cre"), email = "xie@yihui.name"))
 Maintainer: Yihui Xie <xie@yihui.name>
 Description: This is a collection of R games and other funny stuff, such as the
     classic Mine sweeper and sliding puzzles.
