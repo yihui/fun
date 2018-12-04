@@ -2,7 +2,6 @@ Package: fun
 Type: Package
 Title: Use R for Fun
 Version: 0.1.3
-Date: 2011-08-12
 Authors@R: c(person("Yixuan", "Qiu", role = "aut"),
     person("Taiyun", "Wei", role = "aut"),
     person("Yihui", "Xie", role = c("aut", "cre"), email = "xie@yihui.name"))
