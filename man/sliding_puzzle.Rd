@@ -39,9 +39,6 @@ if (interactive()) {
 \references{
 About the sliding puzzle:
   \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
-
-  How to Solve a Slider Puzzle:
-  \url{http://www.justadventure.com/articles/Slider/Slider.shtm}
 }
 \author{
 Taiyun Wei
