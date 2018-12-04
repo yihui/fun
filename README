@@ -1,9 +1,0 @@
-This is a package just for fun. We have been collecting interesting
-code snippets from the forum http://cos.name/cn/
-
-To install this package, you need to use the Rd2roxygen package:
-
-library(Rd2roxygen)
-## when the 'fun' directory is just under your working directory
-roxygen_and_build('fun')
-## or rab('fun', install=TRUE, check=TRUE)
