@@ -40,7 +40,7 @@ for (i in 1:length(y)) {
 }
 yy = matrix(rep(y0, n), n, length(y0), byrow = TRUE)
 library(rgl)
-persp3d(zz, xx, yy, col = "red", xlim = c(-1, 1), ylim = c(-1, 1), zlim = c(-1, 1),
+persp3d(zz, xx, yy, col = "red", xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2), zlim = c(-1, 1),
         axes = FALSE, box = FALSE, xlab = "", ylab = "", zlab = "")
 fy = function(y, pars) {
     z = pars[1]
