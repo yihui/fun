@@ -17,7 +17,7 @@
 #' @author Yixuan Qiu \email{yixuan.qiu@@cos.name}
 #' @note Linux/Mac users have to use \code{X11(type = 'Xlib')} or the Cairo
 #'   graphics device \code{Cairo()} in the package \pkg{cairoDevice}.
-#' @references \url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
+#' @references \url{https://en.wikipedia.org/wiki/Lights_Out_(game)}
 #' @export
 #' @examples
 #' ## should use Xlib for the x11() device under *nix, e.g

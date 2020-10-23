@@ -8,7 +8,7 @@
 #' @param wait time to wait before shutting down (in seconds); passed to
 #'   \code{\link{Sys.sleep}}
 #' @return The status code of \code{\link{system}}.
-#' @author Yihui Xie <\url{http://yihui.name}>
+#' @author Yihui Xie <\url{https://yihui.org}>
 #' @seealso \code{\link{system}}, \code{\link{Sys.sleep}}
 #' @export
 #' @examples

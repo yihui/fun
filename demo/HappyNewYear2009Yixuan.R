@@ -1,6 +1,6 @@
 ## Chinese characters "Happy New Year" scrolling on the screen
 ## original code by Yixuan Qiu <yixuan.qiu@cos.name>
-## URL: http://cos.name/cn/topic/13595
+## URL: https://d.cosx.org/d/13595
 y = c(11, 8, 2, 11, 10, 8, 5, 3, 11, 9, 8, 5, 1, 12,
     11, 8, 7, 6, 5, 4, 3, 2, 1, 11, 9, 8, 5, 11, 10, 8, 5, 3,
     1, 8, 2, 11, 10, 9, 8, 7, 6, 5, 4, 3, 11, 8, 11, 8, 7, 6,

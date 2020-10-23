@@ -1,6 +1,6 @@
 ## Turtle Graphics
 ## code by Linlin Yan <linlin.yan@cos.name>
-## URL: http://cos.name/cn/topic/15876
+## URL: https://d.cosx.org/d/15876
 turtle_x <- 0
 turtle_y <- 0
 turtle_direction <- 0

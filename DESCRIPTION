@@ -1,7 +1,7 @@
 Package: fun
 Type: Package
 Title: Use R for Fun
-Version: 0.2
+Version: 0.2.2
 Authors@R: c(
     person("Yihui", "Xie", role = c("aut", "cre"), email = "xie@yihui.name", comment = c(ORCID = "0000-0003-0645-5666")),
     person("Yixuan", "Qiu", role = "aut"),
@@ -14,5 +14,5 @@ License: GPL
 LazyData: yes
 URL: https://github.com/yihui/fun
 BugReports: https://github.com/yihui/fun/issues
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Encoding: UTF-8

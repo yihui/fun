@@ -35,19 +35,16 @@
 #' @param reserved should reserved characters be encoded? see
 #'   \code{\link[utils]{URLencode}}
 #' @return \code{NULL}
-#' @author Yihui Xie <\url{http://yihui.name}>
+#' @author Yihui Xie <\url{https://yihui.org}>
 #' @seealso \code{\link[base]{cat}}, \code{\link[base]{sprintf}},
 #'   \code{\link[utils]{URLencode}}
 #' @references About the WordPress plugin:
-#'   \url{http://www.roytanck.com/2008/03/15/wp-cumulus-released/}
-#'
-#'   Explanation of some arguments:
-#'   \url{http://www.roytanck.com/2008/05/19/how-to-repurpose-my-tag-cloud-flash-movie/}
+#'   \url{https://wordpress.org/plugins/wp-cumulus/}
 #'
 #'   Usage of the SWFObject: \url{http://blog.deconcept.com/swfobject/}
 #'
 #'   An example of visualizing tags in my blog:
-#'   \url{http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}
+#'   \url{https://yihui.org/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}
 #'
 #' @keywords dynamic file
 #' @export

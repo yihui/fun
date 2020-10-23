@@ -14,7 +14,7 @@
 #'   or the Cairo graphics device \code{Cairo()} in the package
 #'   \pkg{cairoDevice}.
 #' @references About the sliding puzzle:
-#'   \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
+#'   \url{https://en.wikipedia.org/wiki/Sliding_puzzle}
 #' @export
 #' @examples
 #' ## should use Xlib for the x11() device under *nix, e.g

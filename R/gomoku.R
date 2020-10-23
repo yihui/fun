@@ -8,9 +8,9 @@
 #' @return \code{NULL}
 #' @note The players should judge the winner by themselves; this function does
 #'   not do this job (patches are welcome, of course).
-#' @author Yihui Xie <\url{http://yihui.name}>; modified from the code by pklin
-#' @references \url{http://cos.name/cn/topic/104750},
-#'   \url{http://en.wikipedia.org/wiki/Gomoku}
+#' @author Yihui Xie <\url{https://yihui.org}>; modified from the code by pklin
+#' @references \url{https://d.cosx.org/d/104750},
+#'   \url{https://en.wikipedia.org/wiki/Gomoku}
 #' @export
 #' @examples gomoku()
 gomoku <- function(n = 19) {

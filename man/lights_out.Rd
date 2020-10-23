@@ -4,8 +4,16 @@
 \alias{lights_out}
 \title{Play the ``Lights Out'' game in R}
 \usage{
-lights_out(width = 5, height = 5, steps = 3, cheat = FALSE, col.off = "black", 
-    col.on = "white", col.frame = "lightblue", seed = NULL)
+lights_out(
+  width = 5,
+  height = 5,
+  steps = 3,
+  cheat = FALSE,
+  col.off = "black",
+  col.on = "white",
+  col.frame = "lightblue",
+  seed = NULL
+)
 }
 \arguments{
 \item{width}{number of lights in x axis}
@@ -45,7 +53,7 @@ if (interactive()) {
 }
 }
 \references{
-\url{http://en.wikipedia.org/wiki/Lights_Out_(game)}
+\url{https://en.wikipedia.org/wiki/Lights_Out_(game)}
 }
 \author{
 Yixuan Qiu \email{yixuan.qiu@cos.name}

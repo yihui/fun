@@ -7,9 +7,9 @@
 #' forum (See 'References') to show the usage of recursive algorithm.
 #' @param n an integer indicating the number of disks on the rot.
 #' @seealso \code{\link[graphics]{barplot}}
-#' @references Original code: \url{http://cos.name/cn/topic/101199}
+#' @references Original code: \url{https://d.cosx.org/d/101199}
 #'
-#'   About the Tower of Hanoi: \url{http://en.wikipedia.org/wiki/Tower_of_Hanoi}
+#'   About the Tower of Hanoi: \url{https://en.wikipedia.org/wiki/Tower_of_Hanoi}
 #' @author Linlin Yan <\email{linlin.yan@@cos.name}>
 #' @export
 #' @examples

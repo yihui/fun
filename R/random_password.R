@@ -7,7 +7,7 @@
 #' @param extended if \code{FALSE}, use alphanumeric characters only; otherwise
 #'   use all the ASCII characters
 #' @return a character string
-#' @author Yihui Xie <\url{http://yihui.name}>
+#' @author Yihui Xie <\url{https://yihui.org}>
 #' @seealso \code{\link{sample}}
 #' @export
 #' @examples

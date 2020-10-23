@@ -4,13 +4,13 @@
 #' \code{c("&amp;", "&quot;", "&#039;", "&lt;", "&gt;")}, respectively.
 #' @param string the string with (or w/o) HTML special chars
 #' @return the string with special chars replaced.
-#' @author Yihui Xie <\url{http://yihui.name}>
+#' @author Yihui Xie <\url{https://yihui.org}>
 #' @seealso \code{\link{gsub}}
-#' @references \url{http://php.net/manual/en/function.htmlspecialchars.php}
+#' @references \url{https://www.php.net/manual/en/function.htmlspecialchars.php}
 #' @export
 #' @examples
-#' htmlspecialchars("<a href = 'http://yihui.name'>Yihui</a>")
-#' # &lt;a href = &#039;http://yihui.name&#039;&gt;Yihui&lt;/a&gt;
+#' htmlspecialchars("<a href = 'https://yihui.org'>Yihui</a>")
+#' # &lt;a href = &#039;https://yihui.org&#039;&gt;Yihui&lt;/a&gt;
 htmlspecialchars <- function(string) {
   x = c("&", '"', "'", "<", ">")
   subx = c("&amp;", "&quot;", "&#039;", "&lt;", "&gt;")

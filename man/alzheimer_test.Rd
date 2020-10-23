@@ -5,8 +5,14 @@
 \title{Test Alzheimer's disease by finding out the different character in a
 character rectangle}
 \usage{
-alzheimer_test(char1 = c("9", "O", "M", "I", "F", "D"), char2 = c("6", "C", "N", 
-    "T", "E", "O"), nr = 10, nc = 30, seed = NULL, ...)
+alzheimer_test(
+  char1 = c("9", "O", "M", "I", "F", "D"),
+  char2 = c("6", "C", "N", "T", "E", "O"),
+  nr = 10,
+  nc = 30,
+  seed = NULL,
+  ...
+)
 }
 \arguments{
 \item{char1}{the 'background' character}
@@ -38,5 +44,5 @@ x = alzheimer_test()
 }
 }
 \author{
-Yihui Xie <\url{http://yihui.name}>
+Yihui Xie <\url{https://yihui.org}>
 }

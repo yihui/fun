@@ -1,6 +1,6 @@
 # 2D heart with a Chinese five-stars (on the National flag)
 # Author: weiwei; modified by Yihui Xie <xie@yihui.name>
-# original code in a Chinese forum: http://cos.name/cn/topic/16743
+# original code in a Chinese forum: https://d.cosx.org/d/16743
 # this code was written to celebrate China's 60 anniversary
 n = 30000
 p = sort(runif(n, min = 0, max = pi))

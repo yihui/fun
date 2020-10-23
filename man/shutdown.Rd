@@ -34,5 +34,5 @@ if (interactive()) {
 \code{\link{system}}, \code{\link{Sys.sleep}}
 }
 \author{
-Yihui Xie <\url{http://yihui.name}>
+Yihui Xie <\url{https://yihui.org}>
 }

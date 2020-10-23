@@ -38,7 +38,7 @@ if (interactive()) {
 }
 \references{
 About the sliding puzzle:
-  \url{http://en.wikipedia.org/wiki/Sliding_puzzle}
+  \url{https://en.wikipedia.org/wiki/Sliding_puzzle}
 }
 \author{
 Taiyun Wei

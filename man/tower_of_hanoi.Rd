@@ -23,9 +23,9 @@ tower_of_hanoi(7)
 }
 }
 \references{
-Original code: \url{http://cos.name/cn/topic/101199}
+Original code: \url{https://d.cosx.org/d/101199}
 
-  About the Tower of Hanoi: \url{http://en.wikipedia.org/wiki/Tower_of_Hanoi}
+  About the Tower of Hanoi: \url{https://en.wikipedia.org/wiki/Tower_of_Hanoi}
 }
 \seealso{
 \code{\link[graphics]{barplot}}

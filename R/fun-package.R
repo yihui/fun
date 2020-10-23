@@ -32,7 +32,7 @@ NULL
 #'   in hexadecimal format specifying the RGB component of tag colors}
 #'   \item{hicolor}{a character vector similar to \code{color}; the color when
 #'   mouse hangs over the tag} }
-#' @source \url{http://yihui.name/en/} (accessed on June 10, 2009)
+#' @source \url{https://yihui.org/en/} (accessed on June 10, 2009)
 #' @examples
 #' hist(tagData$count/4, 10)  # extremely right skewed
 #' # see help(tag_cloud) for the example of creating tag cloud with this data

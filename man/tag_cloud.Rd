@@ -4,12 +4,30 @@
 \alias{tag_cloud}
 \title{Creating Tag Cloud in R (with Flash and JavaScript)}
 \usage{
-tag_cloud(tagData, htmlOutput = "tagCloud.html", SWFPath = "tagcloud.swf", 
-    JSPath = "swfobject.js", divId = "tagCloudId", width = 600, height = 400, 
-    transparent = FALSE, tcolor = "333333", tcolor2 = "009900", hicolor = "ff0000", 
-    distr = "true", tspeed = 100, version = 9, bgcolor = "ffffff", useXML = FALSE, 
-    htmlTitle = "Tag Cloud", noFlashJS, target = NULL, scriptOnly = FALSE, 
-    encode = FALSE, reserved = FALSE)
+tag_cloud(
+  tagData,
+  htmlOutput = "tagCloud.html",
+  SWFPath = "tagcloud.swf",
+  JSPath = "swfobject.js",
+  divId = "tagCloudId",
+  width = 600,
+  height = 400,
+  transparent = FALSE,
+  tcolor = "333333",
+  tcolor2 = "009900",
+  hicolor = "ff0000",
+  distr = "true",
+  tspeed = 100,
+  version = 9,
+  bgcolor = "ffffff",
+  useXML = FALSE,
+  htmlTitle = "Tag Cloud",
+  noFlashJS,
+  target = NULL,
+  scriptOnly = FALSE,
+  encode = FALSE,
+  reserved = FALSE
+)
 }
 \arguments{
 \item{tagData}{a data.frame containing at least 3 columns: \code{tag},
@@ -80,22 +98,19 @@ if (file.create(htmlFile)) {
 }
 \references{
 About the WordPress plugin:
-  \url{http://www.roytanck.com/2008/03/15/wp-cumulus-released/}
-
-  Explanation of some arguments:
-  \url{http://www.roytanck.com/2008/05/19/how-to-repurpose-my-tag-cloud-flash-movie/}
+  \url{https://wordpress.org/plugins/wp-cumulus/}
 
   Usage of the SWFObject: \url{http://blog.deconcept.com/swfobject/}
 
   An example of visualizing tags in my blog:
-  \url{http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}
+  \url{https://yihui.org/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}
 }
 \seealso{
 \code{\link[base]{cat}}, \code{\link[base]{sprintf}},
   \code{\link[utils]{URLencode}}
 }
 \author{
-Yihui Xie <\url{http://yihui.name}>
+Yihui Xie <\url{https://yihui.org}>
 }
 \keyword{dynamic}
 \keyword{file}

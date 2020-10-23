@@ -33,7 +33,7 @@ if (interactive()) {
 }
 }
 \references{
-\url{http://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
+\url{https://en.wikipedia.org/wiki/Minesweeper_(computer_game)}
 }
 \author{
 Yixuan Qiu \email{yixuan.qiu@cos.name}

@@ -17,15 +17,15 @@ The characters \code{c("&", '"', "'", "<", ">")} will be replaced with
 \code{c("&amp;", "&quot;", "&#039;", "&lt;", "&gt;")}, respectively.
 }
 \examples{
-htmlspecialchars("<a href = 'http://yihui.name'>Yihui</a>")
-# &lt;a href = &#039;http://yihui.name&#039;&gt;Yihui&lt;/a&gt;
+htmlspecialchars("<a href = 'https://yihui.org'>Yihui</a>")
+# &lt;a href = &#039;https://yihui.org&#039;&gt;Yihui&lt;/a&gt;
 }
 \references{
-\url{http://php.net/manual/en/function.htmlspecialchars.php}
+\url{https://www.php.net/manual/en/function.htmlspecialchars.php}
 }
 \seealso{
 \code{\link{gsub}}
 }
 \author{
-Yihui Xie <\url{http://yihui.name}>
+Yihui Xie <\url{https://yihui.org}>
 }

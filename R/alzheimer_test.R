@@ -12,7 +12,7 @@
 #'   returned telling the result of the test.
 #' @note Don't be too serious about this test. I'm no doctor, but I think this
 #'   will be a good present to your friends.
-#' @author Yihui Xie <\url{http://yihui.name}>
+#' @author Yihui Xie <\url{https://yihui.org}>
 #' @export
 #' @examples
 #' \dontrun{

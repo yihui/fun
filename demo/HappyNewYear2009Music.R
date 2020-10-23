@@ -1,6 +1,6 @@
 ## "Happy New Year" music
 ## original code by Yixuan Qiu <yixuan.qiu@cos.name>
-## URL: http://cos.name/cn/topic/13604
+## URL: https://d.cosx.org/d/13604
 if (!require("tuneR"))
     stop("You need the \"tuneR\" package to play the music! (install.packages(\"tuneR\"))")
 d = 20000
