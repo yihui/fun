@@ -1,3 +1,9 @@
+		CHANGES IN fun VERSION 0.3
+
+BUG FIXES
+
+  o Fixed the warnings about `sprintf()` from the current R-devel.
+
 		CHANGES IN fun VERSION 0.2
 
 BUG FIXES
