@@ -73,10 +73,10 @@ tag_cloud = function(
     "<a href='%s' style='%s'%s%s%s>%s</a>",
     tagData$link, tagData$count, if (is.null(target)) "" else sprintf(" target='%s'", target),
     if (is.null(tagData$color)) "" else {
-      ifelse(!is.na(tagData$color), sprintf(" color='0x%s'", tagData$color, ""), "")
+      ifelse(!is.na(tagData$color), sprintf(" color='0x%s'", tagData$color), "")
     },
     if (is.null(tagData$hicolor)) "" else {
-      ifelse(!is.na(tagData$hicolor), sprintf(" hicolor='0x%s'", tagData$hicolor, ""), "")
+      ifelse(!is.na(tagData$hicolor), sprintf(" hicolor='0x%s'", tagData$hicolor), "")
     }, tagData$tag
   ), collapse = ""))
   if (encode) tagXML = URLencode(tagXML, reserved)
