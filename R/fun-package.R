@@ -6,15 +6,11 @@
 #' New games are always welcome; if you know GIT and want to join the
 #' development, please go to \url{https://github.com/yihui/fun}; or simply
 #' contribute ideas at \url{https://github.com/yihui/fun/issues}.
-#' @name fun-package
-#' @aliases fun
-#' @docType package
 #' @author Yihui Xie, Taiyun Wei, and Yixuan Qiu
 #' @keywords package
 #' @examples ## See the examples in each function, or check out the demos
 #' demo(package = 'fun')
-NULL
-
+'_PACKAGE'
 
 #' Tag information of Yihui Xie's English blog
 #'

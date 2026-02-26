@@ -2,8 +2,8 @@
 % Please edit documentation in R/fun-package.R
 \docType{package}
 \name{fun-package}
-\alias{fun-package}
 \alias{fun}
+\alias{fun-package}
 \title{Use R for Fun}
 \description{
 This is a collection of R games and other funny stuff, such as the classical
@@ -17,6 +17,14 @@ contribute ideas at \url{https://github.com/yihui/fun/issues}.
 \examples{
 ## See the examples in each function, or check out the demos
 demo(package = "fun")
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/yihui/fun}
+  \item Report bugs at \url{https://github.com/yihui/fun/issues}
+}
+
 }
 \author{
 Yihui Xie, Taiyun Wei, and Yixuan Qiu

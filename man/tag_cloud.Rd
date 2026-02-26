@@ -92,7 +92,7 @@ data(tagData)
 htmlFile = paste(tempfile(), ".html", sep = "")
 if (file.create(htmlFile)) {
     tag_cloud(tagData, htmlFile)
-    if (!interactive()) 
+    if (!interactive())
         browseURL(htmlFile)
 }
 }
@@ -100,7 +100,7 @@ if (file.create(htmlFile)) {
 About the WordPress plugin:
   \url{https://wordpress.org/plugins/wp-cumulus/}
 
-  Usage of the SWFObject: \url{http://blog.deconcept.com/swfobject/}
+  Usage of the SWFObject: \url{https://blog.deconcept.com/swfobject/}
 
   An example of visualizing tags in my blog:
   \url{https://yihui.org/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}

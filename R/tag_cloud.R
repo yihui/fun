@@ -41,7 +41,7 @@
 #' @references About the WordPress plugin:
 #'   \url{https://wordpress.org/plugins/wp-cumulus/}
 #'
-#'   Usage of the SWFObject: \url{http://blog.deconcept.com/swfobject/}
+#'   Usage of the SWFObject: \url{https://blog.deconcept.com/swfobject/}
 #'
 #'   An example of visualizing tags in my blog:
 #'   \url{https://yihui.org/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/}

@@ -30,7 +30,7 @@ Linux/Mac users have to use \code{\link[grDevices]{X11}(type = 'Xlib')}
 \examples{
 ## should use Xlib for the x11() device under *nix, e.g
 if (interactive()) {
-    if (.Platform$OS.type == "windows") 
+    if (.Platform$OS.type == "windows")
         x11() else x11(type = "Xlib")
     sliding_puzzle()
     sliding_puzzle(z = matrix(0:11, 3, 4))
