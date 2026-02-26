@@ -7,12 +7,13 @@ Authors@R: c(
     person("Yixuan", "Qiu", role = "aut"),
     person("Taiyun", "Wei", role = "aut")
     )
-Maintainer: Yihui Xie <xie@yihui.name>
 Description: This is a collection of R games and other funny stuff, such as the
     classic Mine sweeper and sliding puzzles.
+Depends: R (>= 3.5.0)
+Suggests: rgl, tuneR
+LazyData: true
 License: GPL
-LazyData: yes
 URL: https://github.com/yihui/fun
 BugReports: https://github.com/yihui/fun/issues
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.3
 Encoding: UTF-8
