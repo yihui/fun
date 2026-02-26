@@ -1,3 +1,6 @@
+# CHANGES IN fun VERSION 0.5
+
+
 # CHANGES IN fun VERSION 0.4
 
 - Re-saved the data `tagData` for R >= 3.5.0.
